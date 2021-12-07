@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/atza/static/css/main.b4ac20a2.chunk.css",
-    "main.js": "/atza/static/js/main.99623835.chunk.js",
-    "main.js.map": "/atza/static/js/main.99623835.chunk.js.map",
+    "main.js": "/atza/static/js/main.bf3cf26d.chunk.js",
+    "main.js.map": "/atza/static/js/main.bf3cf26d.chunk.js.map",
     "runtime-main.js": "/atza/static/js/runtime-main.203b1766.js",
     "runtime-main.js.map": "/atza/static/js/runtime-main.203b1766.js.map",
     "static/js/2.f9541e3a.chunk.js": "/atza/static/js/2.f9541e3a.chunk.js",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.203b1766.js",
     "static/js/2.f9541e3a.chunk.js",
     "static/css/main.b4ac20a2.chunk.css",
-    "static/js/main.99623835.chunk.js"
+    "static/js/main.bf3cf26d.chunk.js"
   ]
 }
