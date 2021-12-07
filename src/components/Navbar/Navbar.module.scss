@@ -1,0 +1,47 @@
+@import "../../utils/commons.scss";
+
+.container {
+  @extend .flexRow;
+  justify-content: space-between;
+  min-height: 100px;
+  padding: 0 1rem;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+
+  .navItems {
+    @extend .flexRow;
+    justify-content: space-between;
+
+    list-style: none;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+      color: var(--clr-text-dark);
+    }
+  }
+  .leftNav {
+    width: 12%;
+    margin-left: calc((100% - var(--fixed-width)) / 2);
+  }
+  .rightNav {
+    width: 20%;
+    margin-right: calc((100% - var(--fixed-width)) / 2);
+  }
+
+  @media screen and (max-width: $media-lg) {
+    .leftNav {
+      width: 15%;
+    }
+    .rightNav {
+      width: 25%;
+    }
+  }
+
+  @media screen and (max-width: $media-md) {
+    .leftNav {
+      width: 20%;
+    }
+    .rightNav {
+      width: 30%;
+    }
+  }
+}

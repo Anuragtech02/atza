@@ -1,0 +1,30 @@
+@import "../../utils/commons.scss";
+
+.container {
+  padding: 1rem 0;
+  min-height: calc(100vh - 100px);
+
+  .hero {
+    margin: 2rem auto;
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      div {
+        display: inline-block;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .featureCards {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background: url("../../assets/background\ 1st\ page.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

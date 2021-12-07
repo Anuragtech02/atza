@@ -4,4 +4,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --clr-text-dark: rgba(20, 20, 20, 0.9);
+  --fixed-width: 80%;
+}
+body {
+  font-size: 16px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: var(--clr-text-dark);
+    margin: 0.5rem 0;
+  }
+
+  p,
+  span {
+    color: rgba(0, 0, 0, 0.7);
+  }
 }

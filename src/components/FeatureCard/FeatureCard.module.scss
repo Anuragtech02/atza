@@ -1,0 +1,33 @@
+@import "../../utils/commons.scss";
+
+$cardHeight: 400px;
+
+.container {
+  width: 100%;
+  height: $cardHeight;
+  border-radius: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  //   background-size: cover;
+  overflow: hidden;
+  background-color: red;
+  box-shadow: 2px 2px 2rem rgba(0, 0, 0, 0.2);
+
+  .content {
+    margin-top: $cardHeight;
+    @extend .flexRow;
+    height: 50px;
+    padding: 0 1rem;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.2s ease-out;
+    transition-property: margin-top, background;
+    h4 {
+      font-weight: 600;
+    }
+  }
+
+  &:hover .content {
+    margin-top: calc($cardHeight - 50px);
+  }
+}
