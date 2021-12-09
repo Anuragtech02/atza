@@ -37,8 +37,8 @@
 
   .portfolio {
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
+    background: rgba(0, 0, 0, 1);
+    padding: 2rem 1rem;
 
     h1 {
       font-size: 2rem;
@@ -48,6 +48,7 @@
 
     .projects {
       margin: 2rem calc((100% - var(--fixed-width)) / 2);
+      @extend .flexRow;
 
       .project {
         height: 200px;
@@ -55,6 +56,8 @@
         border-radius: 1rem;
         overflow: hidden;
         position: relative;
+        border: 2px solid white;
+        margin: 1rem;
 
         img {
           width: 100%;
@@ -83,6 +86,19 @@
             bottom: 0;
           }
         }
+      }
+    }
+  }
+
+  .clients {
+    padding: 1rem 0.4rem;
+
+    .client {
+      @extend .flexRow;
+      display: flex !important;
+      align-items: center !important;
+      img {
+        width: 250px;
       }
     }
   }
