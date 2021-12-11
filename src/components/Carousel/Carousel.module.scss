@@ -1,7 +1,9 @@
 @import "../../utils/commons.scss";
 
 .carousel {
-  > div {
-    height: 100%;
+  height: 400px;
+  overflow: hidden;
+  div {
+    height: 100% !important;
   }
 }

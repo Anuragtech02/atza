@@ -113,7 +113,7 @@ const Clients = ({ clients = [] }) => {
         Established super brands and growing startups backed by top VC firms
         around india.
       </p>
-      <div className={styles.clients}>
+      <div className={styles.clientsSlider}>
         <Carousel>
           {clients.map((client) => (
             <div className={styles.client}>

@@ -38,6 +38,10 @@
   .portfolio {
     width: 100%;
     background: rgba(0, 0, 0, 1);
+    background-image: url(../../assets/bg/portfolio-pattern.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: -8%;
     padding: 2rem 1rem;
 
     h1 {
@@ -49,6 +53,7 @@
     .projects {
       margin: 2rem calc((100% - var(--fixed-width)) / 2);
       @extend .flexRow;
+      flex-wrap: wrap;
 
       .project {
         height: 200px;
@@ -91,14 +96,35 @@
   }
 
   .clients {
-    padding: 1rem 0.4rem;
+    padding: 2rem 0;
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
 
-    .client {
-      @extend .flexRow;
-      display: flex !important;
-      align-items: center !important;
-      img {
-        width: 250px;
+    .clientsSlider {
+      background: rgba(0, 0, 0, 0.07);
+      padding: 1rem 0;
+      margin-top: 1rem;
+
+      .client {
+        @extend .flexRow;
+        display: flex !important;
+        align-items: center !important;
+        cursor: pointer;
+        transition: 0.2s ease-out;
+        transition-property: background;
+        border-radius: 1rem;
+        img {
+          width: 250px;
+        }
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.1);
+        }
       }
     }
   }
