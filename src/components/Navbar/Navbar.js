@@ -25,6 +25,11 @@ const Navbar = () => {
           <Link to="/#faq">FAQ</Link>
         </li>
       </ul>
+      <div className={styles.burgerMenu}>
+        <div className={styles.burger}></div>
+        <div className={styles.burger}></div>
+        <div className={styles.burger}></div>
+      </div>
     </nav>
   );
 };

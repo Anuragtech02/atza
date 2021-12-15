@@ -25,14 +25,22 @@
     height: 450px;
     // margin: 0 auto;
     margin-top: 5rem;
-    background: url("/assets/bg-home.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
+    // background: url(../../assets/bg-home.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    z-index: 1;
     .card {
       padding: 1rem;
     }
+  }
+
+  .bgImage {
+    position: absolute;
+    width: 100vw;
+    z-index: 0;
+    object-fit: cover;
+    height: 450px;
   }
 
   .portfolio {

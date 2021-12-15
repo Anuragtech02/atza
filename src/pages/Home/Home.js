@@ -9,6 +9,8 @@ import project2 from "../../assets/editing.png";
 import project3 from "../../assets/event.png";
 import project4 from "../../assets/ui-ux.png";
 
+import bgHome from "../../assets/bg-home.png";
+
 import tataLogo from "../../assets/logos/tata-logo.png";
 import bigbasketLogo from "../../assets/logos/bigbasket-logo.png";
 import nikeLogo from "../../assets/logos/nike-logo.png";
@@ -49,6 +51,7 @@ const Home = () => {
             We've got solutions for everyone
           </p>
         </div>
+        <img className={styles.bgImage} alt="bg-home" src={bgHome} />
         <div className={styles.featureCards}>
           <Grid
             container
