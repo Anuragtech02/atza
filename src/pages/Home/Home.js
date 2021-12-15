@@ -3,7 +3,7 @@ import styles from "./Home.module.scss";
 import Typewriter from "typewriter-effect";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 import forYouImage from "../../assets/for-you.png";
-import { Grid } from "@mui/material";
+import { Grid, IconButton } from "@mui/material";
 import project1 from "../../assets/graphic.png";
 import project2 from "../../assets/editing.png";
 import project3 from "../../assets/event.png";
@@ -14,6 +14,12 @@ import bigbasketLogo from "../../assets/logos/bigbasket-logo.png";
 import nikeLogo from "../../assets/logos/nike-logo.png";
 import comLogo from "../../assets/logos/com-logo.png";
 import Carousel from "../../components/Carousel/Carousel";
+
+import { IoLogoFacebook } from "react-icons/io";
+import { AiFillInstagram } from "react-icons/ai";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaBeer } from "react-icons/fa";
+import { IoCall } from "react-icons/io5";
 
 const Home = () => {
   const projects = [
@@ -66,6 +72,7 @@ const Home = () => {
         </div>
         <Portfolio projects={projects} />
         <Clients clients={clients} />
+        <Footer />
       </section>
     </>
   );
@@ -108,11 +115,13 @@ const Portfolio = ({ projects = [] }) => {
 const Clients = ({ clients = [] }) => {
   return (
     <section className={styles.clients}>
-      <h1>Clients</h1>
-      <p>
-        Established super brands and growing startups backed by top VC firms
-        around india.
-      </p>
+      <div className={styles.heading}>
+        <h1>Clients</h1>
+        <p>
+          Established super brands and growing startups backed by top VC firms
+          around india.
+        </p>
+      </div>
       <div className={styles.clientsSlider}>
         <Carousel>
           {clients.map((client) => (
@@ -126,5 +135,56 @@ const Clients = ({ clients = [] }) => {
         </Carousel>
       </div>
     </section>
+  );
+};
+
+const Footer = () => {
+  const social = [
+    {
+      icon: <FaBeer color="white" />,
+      link: "tel:+918888888888",
+    },
+    {
+      icon: <FaBeer color="white" />,
+      link: "https://www.facebook.com",
+    },
+    {
+      icon: <FaBeer color="white" />,
+      link: "https://www.instagram.com",
+    },
+    {
+      icon: <FaBeer color="white" />,
+      link: "https://www.whatsapp.com",
+    },
+  ];
+  return (
+    <footer className={styles.footerContainer}>
+      <div className={styles.content}>
+        <h4>shall we chat?</h4>
+        <h1>
+          Let's talk about your
+          <br /> business?
+        </h1>
+        <div className={styles.hline}></div>
+        <p>
+          It is a long established fact that a reader willl be distracted by the
+          readable content of a page when looking at its layout.
+        </p>
+        <div className={styles.socialLinks}>
+          <IconButton className={styles.socialIcon}>
+            <IoCall color="white" />
+          </IconButton>
+          <IconButton className={styles.socialIcon}>
+            <IoLogoFacebook color="white" />
+          </IconButton>
+          <IconButton className={styles.socialIcon}>
+            <AiFillInstagram color="white" />
+          </IconButton>
+          <IconButton className={styles.socialIcon}>
+            <IoLogoWhatsapp color="white" />
+          </IconButton>
+        </div>
+      </div>
+    </footer>
   );
 };
