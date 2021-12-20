@@ -9,7 +9,7 @@ import project2 from "../../assets/editing.png";
 import project3 from "../../assets/event.png";
 import project4 from "../../assets/ui-ux.png";
 
-import bgHome from "../../assets/bg-home.png";
+import bgHome from "../../assets/bg-test.jpg";
 
 import tataLogo from "../../assets/logos/tata-logo.png";
 import bigbasketLogo from "../../assets/logos/bigbasket-logo.png";
