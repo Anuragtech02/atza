@@ -22,6 +22,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaBeer } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
+import Slider from "react-slick";
 
 const Home = () => {
   const projects = [
@@ -36,6 +37,27 @@ const Home = () => {
     { logo: bigbasketLogo, description: "" },
     { logo: nikeLogo, description: "" },
     { logo: comLogo, description: "" },
+  ];
+
+  const testimonials = [
+    {
+      name: "Dan Brown",
+      image: nikeLogo,
+      position: "Senior Marketing Manager at Mozilla",
+      message: "They're very responsive and go satisfaction",
+    },
+    {
+      name: "Dan Brown",
+      image: nikeLogo,
+      position: "Senior Marketing Manager at Mozilla",
+      message: "They're very responsive and go satisfaction",
+    },
+    {
+      name: "Dan Brown",
+      image: nikeLogo,
+      position: "Senior Marketing Manager at Mozilla",
+      message: "They're very responsive and go satisfaction",
+    },
   ];
 
   return (
@@ -65,7 +87,7 @@ const Home = () => {
             }}
           >
             {["YOU", "BIZ"].map((item, i) => (
-              <Grid item md={6}>
+              <Grid item md={6} sm={12} xs={12}>
                 <div className={styles.card}>
                   <FeatureCard image={forYouImage} title={item} />
                 </div>
@@ -75,6 +97,7 @@ const Home = () => {
         </div>
         <Portfolio projects={projects} />
         <Clients clients={clients} />
+        <Testimonials testimonials={testimonials} />
         <Footer />
       </section>
     </>
@@ -141,25 +164,37 @@ const Clients = ({ clients = [] }) => {
   );
 };
 
+const Testimonials = ({ testimonials = [] }) => {
+  return (
+    <section className={styles.testimonial}>
+      <div className={styles.testimonialSlider}>
+        <Carousel
+          settings={{ infinite: true }}
+          className={styles.testimonialCarousel}
+        >
+          {testimonials.map((testimonial) => (
+            <div className={styles.testimonialItem}>
+              <div className={styles.testimonialContent}>
+                <img
+                  src={testimonial.image}
+                  className={styles.profile}
+                  alt="profile"
+                />
+                <div className={styles.testimonialDescription}>
+                  <h3>{testimonial.name}</h3>
+                  <span>{testimonial.position}</span>
+                  <p>"{testimonial.message}"</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => {
-  const social = [
-    {
-      icon: <FaBeer color="white" />,
-      link: "tel:+918888888888",
-    },
-    {
-      icon: <FaBeer color="white" />,
-      link: "https://www.facebook.com",
-    },
-    {
-      icon: <FaBeer color="white" />,
-      link: "https://www.instagram.com",
-    },
-    {
-      icon: <FaBeer color="white" />,
-      link: "https://www.whatsapp.com",
-    },
-  ];
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.content}>

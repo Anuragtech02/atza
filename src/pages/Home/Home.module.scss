@@ -6,12 +6,16 @@
 
   .hero {
     margin: 2rem auto;
+    padding: 0 1rem;
     h2 {
       font-size: 2rem;
       font-weight: 600;
       text-align: center;
       div {
         display: inline-block;
+      }
+      span {
+        color: rgba(0, 0, 0, 0.9);
       }
     }
     p {
@@ -40,7 +44,12 @@
     width: 100%;
     z-index: 0;
     object-fit: cover;
-    height: 500px;
+    height: 450px;
+    margin-top: 3rem;
+
+    @media screen and (max-width: 899px) {
+      height: 850px;
+    }
   }
 
   .portfolio {
@@ -101,10 +110,14 @@
         }
       }
     }
+
+    @media screen and (max-width: 899px) {
+      margin-top: 25rem;
+    }
   }
 
   .clients {
-    padding: 2rem 0;
+    padding-top: 2rem;
     h1 {
       font-size: 2rem;
       text-align: center;
@@ -135,6 +148,61 @@
 
         &:hover {
           background: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 3rem 0;
+    background: url(../../assets/bg-test.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .testimonialSlider {
+      width: var(--fixed-width);
+      margin: 0 auto;
+      .testimonialCarousel {
+        height: fit-content;
+
+        .testimonialItem {
+          $profileWidth: 10rem;
+          .testimonialContent {
+            position: relative;
+            width: 90% !important;
+            min-height: 300px;
+            padding: 1rem;
+            margin-top: calc($profileWidth/2);
+            background: white;
+
+            .profile {
+              position: absolute;
+              top: calc($profileWidth/2 * (-1));
+              left: 50%;
+              transform: translateX(-50%);
+              width: $profileWidth;
+              height: $profileWidth;
+              border-radius: 50%;
+              object-fit: cover;
+              background: rgb(233, 233, 233);
+            }
+
+            .testimonialDescription {
+              margin-top: calc($profileWidth/2);
+
+              h3 {
+                font-weight: 600;
+              }
+              span {
+                font-size: 0.9rem;
+                color: rgba(0, 0, 0, 0.7);
+              }
+              p {
+                margin-top: 2rem;
+                color: rgba(0, 0, 0, 0.9);
+                font-weight: 600;
+              }
+            }
+          }
         }
       }
     }

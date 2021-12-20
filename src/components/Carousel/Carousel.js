@@ -3,14 +3,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from "./Carousel.module.scss";
+import clsx from "clsx";
 
-const Carousel = ({ children }) => {
+const Carousel = ({ children, className }, props) => {
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    ...props,
     responsive: [
       // when window width is <= 480px
       {
@@ -39,7 +41,7 @@ const Carousel = ({ children }) => {
     ],
   };
   return (
-    <Slider {...settings} className={styles.carousel}>
+    <Slider {...settings} className={clsx(styles.carousel, className)}>
       {children}
     </Slider>
   );
