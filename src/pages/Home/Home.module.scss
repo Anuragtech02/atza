@@ -169,8 +169,8 @@
           .testimonialContent {
             position: relative;
             width: 90% !important;
-            min-height: 300px;
-            padding: 1rem;
+            min-height: 350px;
+            padding: 1rem 2rem;
             margin-top: calc($profileWidth/2);
             background: white;
 
@@ -217,7 +217,7 @@
     .content {
       width: var(--fixed-width);
       margin: 0 auto;
-      padding: 3rem 0;
+      padding: 5rem 0;
 
       h1,
       h4 {
