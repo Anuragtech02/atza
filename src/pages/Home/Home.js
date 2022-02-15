@@ -4,10 +4,10 @@ import Typewriter from "typewriter-effect";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 import forYouImage from "../../assets/for-you.png";
 import { Grid, IconButton } from "@mui/material";
-import project1 from "../../assets/graphic.png";
-import project2 from "../../assets/editing.png";
-import project3 from "../../assets/event.png";
-import project4 from "../../assets/ui-ux.png";
+import project1 from "../../assets/atza-graphic.jpg";
+import project2 from "../../assets/video-editing.jpg";
+import project3 from "../../assets/atza-events.jpg";
+import project4 from "../../assets/atza-ui.jpg";
 
 import bgHome from "../../assets/bg-test.jpg";
 
