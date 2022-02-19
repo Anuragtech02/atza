@@ -20,9 +20,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import { IoLogoFacebook } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FaBeer } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
-import Slider from "react-slick";
 
 const Home = () => {
   const projects = [
