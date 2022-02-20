@@ -16,7 +16,7 @@ const Navbar = () => {
       </ul>
       <ul className={clsx(styles.navItems, styles.rightNav)}>
         <li className={styles.navItem}>
-          <Link to="/#about">About Us</Link>
+          <Link to="/about">About Us</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/#contact">Contact</Link>

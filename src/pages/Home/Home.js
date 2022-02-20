@@ -1,9 +1,8 @@
-import Navbar from "../../components/Navbar/Navbar";
 import styles from "./Home.module.scss";
 import Typewriter from "typewriter-effect";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 import forYouImage from "../../assets/for-you.png";
-import { Grid, IconButton } from "@mui/material";
+import { Grid } from "@mui/material";
 import project1 from "../../assets/atza-graphic.jpg";
 import project2 from "../../assets/video-editing.jpg";
 import project3 from "../../assets/atza-events.jpg";
@@ -17,10 +16,7 @@ import nikeLogo from "../../assets/logos/nike-logo.png";
 import comLogo from "../../assets/logos/com-logo.png";
 import Carousel from "../../components/Carousel/Carousel";
 
-import { IoLogoFacebook } from "react-icons/io";
-import { AiFillInstagram } from "react-icons/ai";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { IoCall } from "react-icons/io5";
+import { Footer, Navbar } from "../../components";
 
 const Home = () => {
   const projects = [
@@ -85,7 +81,7 @@ const Home = () => {
             }}
           >
             {["YOU", "BIZ"].map((item, i) => (
-              <Grid item md={6} sm={12} xs={12}>
+              <Grid key={i} item md={6} sm={12} xs={12}>
                 <div className={styles.card}>
                   <FeatureCard image={forYouImage} title={item} />
                 </div>
@@ -123,7 +119,7 @@ const Portfolio = ({ projects = [] }) => {
       <div className={styles.projects}>
         {/* <Grid container> */}
         {projects.map((project) => (
-          <div className={styles.project}>
+          <div key={project.title} className={styles.project}>
             <img src={project.image} alt={project.title} />
             <div className={styles.content}>
               <h3>{project.title}</h3>
@@ -148,8 +144,8 @@ const Clients = ({ clients = [] }) => {
       </div>
       <div className={styles.clientsSlider}>
         <Carousel>
-          {clients.map((client) => (
-            <div className={styles.client}>
+          {clients.map((client, i) => (
+            <div key={i} className={styles.client}>
               <img src={client.logo} alt={client.title} />
               {/* <div className={styles.content}>
               <h3>{client.title}</h3>
@@ -170,8 +166,8 @@ const Testimonials = ({ testimonials = [] }) => {
           settings={{ infinite: true }}
           className={styles.testimonialCarousel}
         >
-          {testimonials.map((testimonial) => (
-            <div className={styles.testimonialItem}>
+          {testimonials.map((testimonial, i) => (
+            <div key={i} className={styles.testimonialItem}>
               <div className={styles.testimonialContent}>
                 <img
                   src={testimonial.image}
@@ -189,38 +185,5 @@ const Testimonials = ({ testimonials = [] }) => {
         </Carousel>
       </div>
     </section>
-  );
-};
-
-const Footer = () => {
-  return (
-    <footer className={styles.footerContainer}>
-      <div className={styles.content}>
-        <h4>shall we chat?</h4>
-        <h1>
-          Let's talk about your
-          <br /> business?
-        </h1>
-        <div className={styles.hline}></div>
-        <p>
-          It is a long established fact that a reader willl be distracted by the
-          readable content of a page when looking at its layout.
-        </p>
-        <div className={styles.socialLinks}>
-          <IconButton className={styles.socialIcon}>
-            <IoCall color="white" />
-          </IconButton>
-          <IconButton className={styles.socialIcon}>
-            <IoLogoFacebook color="white" />
-          </IconButton>
-          <IconButton className={styles.socialIcon}>
-            <AiFillInstagram color="white" />
-          </IconButton>
-          <IconButton className={styles.socialIcon}>
-            <IoLogoWhatsapp color="white" />
-          </IconButton>
-        </div>
-      </div>
-    </footer>
   );
 };
