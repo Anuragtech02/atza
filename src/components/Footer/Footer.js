@@ -15,10 +15,10 @@ const Footer = () => {
           <br /> business?
         </h1>
         <div className={styles.hline}></div>
-        <p>
+        {/* <p>
           It is a long established fact that a reader willl be distracted by the
           readable content of a page when looking at its layout.
-        </p>
+        </p> */}
         <div className={styles.socialLinks}>
           <IconButton className={styles.socialIcon}>
             <IoCall color="white" />

@@ -1,7 +1,7 @@
 @import "../../utils/commons.scss";
 
 .footerContainer {
-  background-color: black;
+  background-color: var(--clr-primary);
   background-image: url(../../assets/bg/footer-pattern.png);
   background-repeat: no-repeat;
   background-size: cover;
