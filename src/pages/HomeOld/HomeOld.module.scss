@@ -1,0 +1,210 @@
+@import "../../utils/commons.scss";
+
+.container {
+  // padding: 1rem 0;
+  min-height: calc(100vh - 100px);
+
+  .hero {
+    margin: 2rem auto;
+    padding: 0 1rem;
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      div {
+        display: inline-block;
+      }
+      span {
+        color: rgba(0, 0, 0, 0.9);
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .featureCards {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    // margin: 0 auto;
+    margin-top: 5rem;
+    // background: url(../../assets/bg-home.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    z-index: 1;
+    .card {
+      padding: 1rem;
+    }
+  }
+
+  .bgImage {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    object-fit: cover;
+    height: 450px;
+    margin-top: 3rem;
+
+    @media screen and (max-width: 899px) {
+      height: 850px;
+    }
+  }
+
+  .portfolio {
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    background-image: url(../../assets/bg/portfolio-pattern.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: -8%;
+    padding: 4rem 1rem;
+
+    h1 {
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+    }
+
+    .projects {
+      margin: 2rem calc((100% - var(--fixed-width)) / 2);
+      @extend .flexRow;
+      flex-wrap: wrap;
+
+      .project {
+        height: 200px;
+        width: 200px;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid white;
+        margin: 1rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .content {
+          position: absolute;
+          bottom: -50px;
+          left: 0;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          padding: 0 0.5rem;
+          height: 50px;
+          h3 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+          }
+
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          .content {
+            bottom: 0;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 899px) {
+      margin-top: 25rem;
+    }
+  }
+
+  .clients {
+    padding-top: 2rem;
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    .heading {
+      padding: 1rem;
+    }
+
+    .clientsSlider {
+      background: rgba(0, 0, 0, 0.07);
+      padding: 1rem 0;
+      margin-top: 1rem;
+
+      .client {
+        @extend .flexRow;
+        display: flex !important;
+        align-items: center !important;
+        cursor: pointer;
+        transition: 0.2s ease-out;
+        transition-property: background;
+        border-radius: 1rem;
+        img {
+          max-width: 220px;
+        }
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 3rem 0;
+    background: url(../../assets/bg-test.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .testimonialSlider {
+      width: var(--fixed-width);
+      margin: 0 auto;
+      .testimonialCarousel {
+        height: fit-content;
+
+        .testimonialItem {
+          $profileWidth: 10rem;
+          .testimonialContent {
+            position: relative;
+            width: 90% !important;
+            min-height: 350px;
+            padding: 1rem 2rem;
+            margin-top: calc($profileWidth/2);
+            background: white;
+
+            .profile {
+              position: absolute;
+              top: calc($profileWidth/2 * (-1));
+              left: 50%;
+              transform: translateX(-50%);
+              width: $profileWidth;
+              height: $profileWidth;
+              border-radius: 50%;
+              object-fit: cover;
+              background: rgb(233, 233, 233);
+            }
+
+            .testimonialDescription {
+              margin-top: calc($profileWidth/2);
+
+              h3 {
+                font-weight: 600;
+              }
+              span {
+                font-size: 0.9rem;
+                color: rgba(0, 0, 0, 0.7);
+              }
+              p {
+                margin-top: 2rem;
+                color: rgba(0, 0, 0, 0.9);
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

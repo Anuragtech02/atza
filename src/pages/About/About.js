@@ -21,7 +21,6 @@ const About = () => {
 
   return (
     <>
-      <Navbar />
       <main className={styles.main}>
         <section className={styles.hero}>
           <div className={styles.text}>
@@ -67,7 +66,6 @@ const About = () => {
         </section>
         <section className={styles.whyChoose}></section>
       </main>
-      <Footer />
     </>
   );
 };

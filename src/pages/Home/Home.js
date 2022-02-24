@@ -1,29 +1,44 @@
 import styles from "./Home.module.scss";
-import Typewriter from "typewriter-effect";
-import FeatureCard from "../../components/FeatureCard/FeatureCard";
-import forYouImage from "../../assets/for-you.png";
+import MainLayout from "../../layouts/MainLayout";
+import servicesIcon from "../../assets/icons/services-icon.png";
+import usersIcon from "../../assets/icons/users-icon.png";
+import clsx from "clsx";
 import { Grid } from "@mui/material";
 import project1 from "../../assets/atza-graphic.jpg";
 import project2 from "../../assets/video-editing.jpg";
 import project3 from "../../assets/atza-events.jpg";
 import project4 from "../../assets/atza-ui.jpg";
-
-import bgHome from "../../assets/bg-test.jpg";
+import { Carousel } from "../../components";
 
 import tataLogo from "../../assets/logos/tata-logo.png";
 import bigbasketLogo from "../../assets/logos/bigbasket-logo.png";
 import nikeLogo from "../../assets/logos/nike-logo.png";
 import comLogo from "../../assets/logos/com-logo.png";
-import Carousel from "../../components/Carousel/Carousel";
 
-import { Footer, Navbar } from "../../components";
+import { BsArrowRight } from "react-icons/bs";
 
 const Home = () => {
-  const projects = [
-    { image: project1, title: "Graphic Design" },
-    { image: project2, title: "Video Editing" },
-    { image: project3, title: "Events" },
-    { image: project4, title: "UI/UX Design" },
+  const services = [
+    {
+      title: "Video Studio",
+      link: "/video-studio",
+      image: project1,
+    },
+    {
+      title: "Content Writing & Management",
+      link: "/content",
+      image: project2,
+    },
+    {
+      title: "Design & UI/UX",
+      link: "/design",
+      image: project3,
+    },
+    {
+      title: "Events",
+      link: "/events",
+      image: project4,
+    },
   ];
 
   const clients = [
@@ -52,104 +67,105 @@ const Home = () => {
       position: "Senior Marketing Manager at Mozilla",
       message: "They're very responsive and go satisfaction",
     },
+    {
+      name: "Dan Brown",
+      image: nikeLogo,
+      position: "Senior Marketing Manager at Mozilla",
+      message: "They're very responsive and go satisfaction",
+    },
   ];
 
   return (
-    <>
-      <Navbar />
-      <section className={styles.container}>
+    <MainLayout classes={[styles.container]}>
+      <div className={styles.wrapper}>
         <div className={styles.hero}>
-          <h2>
-            Looking for <TypeWriterComponent />? ATZA hai na!{" "}
-          </h2>
-          <p>
-            Are you a Brand, Entrepreneur or Individual? <br />
-            We've got solutions for everyone
-          </p>
+          <span>LOGO</span>
+          <h4>
+            <strong>
+              A Part of the LIMEWIT Media group, we're a Media-as-a-Service
+              Organization
+            </strong>{" "}
+            with a team of passionate Mediapreneurs and a knack of improving the
+            Digital Content & Media Ecosystem
+          </h4>
+          <button>
+            <span>
+              Learn More about us &nbsp; <BsArrowRight />
+            </span>
+          </button>
         </div>
-        <img className={styles.bgImage} alt="bg-home" src={bgHome} />
-        <div className={styles.featureCards}>
-          <Grid
-            container
-            style={{
-              width: "var(--fixed-width)",
-              margin: "0 auto",
-              position: "absolute",
-              top: "-3rem",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-          >
-            {["YOU", "BIZ"].map((item, i) => (
-              <Grid key={i} item md={6} sm={12} xs={12}>
-                <div className={styles.card}>
-                  <FeatureCard image={forYouImage} title={item} />
-                </div>
+      </div>
+      <div className={styles.stats}>
+        <div className={styles.heading}>
+          <h2>Our Superstats</h2>
+          <span></span>
+        </div>
+        <div className={styles.counters}>
+          <div className={clsx(styles.clients, styles.counter)}>
+            <span>
+              <img src={usersIcon} alt="clients" />
+            </span>
+            <div>
+              <h1>50+</h1>
+              <p>Clients Served</p>
+            </div>
+          </div>
+          <div className={clsx(styles.services, styles.counter)}>
+            <span>
+              <img src={servicesIcon} alt="services" />
+            </span>
+            <div>
+              <h1>5+</h1>
+              <p>Services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className={styles.servicesContainer}>
+        <h1>Here's how we add value to your Brand</h1>
+        <h4>
+          We are offer a plethora of Services to help you crack the digital
+          Conundrum & make an impact on your potential customers
+        </h4>
+        <div className={styles.services}>
+          <Grid container>
+            {services.map((service, i) => (
+              <Grid item key={service.title} md={3} sm={6} xs={12}>
+                <article key={i} className={styles.service}>
+                  <img src={service.image} alt={service.title} />
+                  <div>
+                    <h3>{service.title}</h3>
+                    <BsArrowRight fontSize={20} />
+                  </div>
+                </article>
               </Grid>
             ))}
           </Grid>
         </div>
-        <Portfolio projects={projects} />
-        <Clients clients={clients} />
-        <Testimonials testimonials={testimonials} />
-        <Footer />
       </section>
-    </>
+      <Clients clients={clients} />
+      <Testimonials testimonials={testimonials} />
+    </MainLayout>
   );
 };
 
 export default Home;
 
-const TypeWriterComponent = () => {
-  return (
-    <Typewriter
-      options={{
-        strings: ["Changing Text", "Video Editing", "Photoshoot"],
-        autoStart: true,
-        loop: true,
-      }}
-    />
-  );
-};
-
-const Portfolio = ({ projects = [] }) => {
-  return (
-    <section className={styles.portfolio}>
-      <h1>Portfolio</h1>
-      <div className={styles.projects}>
-        {/* <Grid container> */}
-        {projects.map((project) => (
-          <div key={project.title} className={styles.project}>
-            <img src={project.image} alt={project.title} />
-            <div className={styles.content}>
-              <h3>{project.title}</h3>
-            </div>
-          </div>
-        ))}
-        {/* </Grid> */}
-      </div>
-    </section>
-  );
-};
-
 const Clients = ({ clients = [] }) => {
   return (
     <section className={styles.clients}>
       <div className={styles.heading}>
-        <h1>Clients</h1>
-        <p>
-          Established super brands and growing startups backed by top VC firms
-          around india.
-        </p>
+        <h1>SuperClients</h1>
+        <p>The superbrands we've helped create an impact</p>
       </div>
       <div className={styles.clientsSlider}>
-        <Carousel>
+        <Carousel className={styles.slider}>
           {clients.map((client, i) => (
             <div key={i} className={styles.client}>
               <img src={client.logo} alt={client.title} />
               {/* <div className={styles.content}>
-              <h3>{client.title}</h3>
-            </div> */}
+                <h3>{client.title}</h3>
+              </div> */}
             </div>
           ))}
         </Carousel>
@@ -165,6 +181,8 @@ const Testimonials = ({ testimonials = [] }) => {
         <Carousel
           settings={{ infinite: true }}
           className={styles.testimonialCarousel}
+          prevBtnClasses={styles.prevBtn}
+          nextBtnClasses={styles.nextBtn}
         >
           {testimonials.map((testimonial, i) => (
             <div key={i} className={styles.testimonialItem}>

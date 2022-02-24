@@ -5,32 +5,34 @@ import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   return (
-    <nav className={styles.container}>
-      <ul className={clsx(styles.navItems, styles.leftNav)}>
-        <li className={styles.navItem}>
-          <Link to="/">Services</Link>
-        </li>
-        {/* <li className={styles.navItem}>
+    <div className={styles.wrapper}>
+      <nav className={styles.container}>
+        <ul className={clsx(styles.navItems, styles.leftNav)}>
+          <li className={styles.navItem}>
+            <Link to="/">Services</Link>
+          </li>
+          {/* <li className={styles.navItem}>
           <Link to="/">Option2</Link>
         </li> */}
-      </ul>
-      <ul className={clsx(styles.navItems, styles.rightNav)}>
-        <li className={styles.navItem}>
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link to="/contact">Contact Us</Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link to="/about">About Us</Link>
-        </li>
-      </ul>
-      <div className={styles.burgerMenu}>
-        <div className={styles.burger}></div>
-        <div className={styles.burger}></div>
-        <div className={styles.burger}></div>
-      </div>
-    </nav>
+        </ul>
+        <ul className={clsx(styles.navItems, styles.rightNav)}>
+          <li className={styles.navItem}>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/about">About Us</Link>
+          </li>
+        </ul>
+        <div className={styles.burgerMenu}>
+          <div className={styles.burger}></div>
+          <div className={styles.burger}></div>
+          <div className={styles.burger}></div>
+        </div>
+      </nav>
+    </div>
   );
 };
 
