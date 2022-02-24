@@ -8,21 +8,21 @@ const Navbar = () => {
     <nav className={styles.container}>
       <ul className={clsx(styles.navItems, styles.leftNav)}>
         <li className={styles.navItem}>
-          <Link to="/">Option1</Link>
+          <Link to="/">Services</Link>
         </li>
-        <li className={styles.navItem}>
+        {/* <li className={styles.navItem}>
           <Link to="/">Option2</Link>
-        </li>
+        </li> */}
       </ul>
       <ul className={clsx(styles.navItems, styles.rightNav)}>
         <li className={styles.navItem}>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/contact">Contact Us</Link>
+        </li>
+        <li className={styles.navItem}>
           <Link to="/about">About Us</Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link to="/#contact">Contact</Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link to="/#faq">FAQ</Link>
         </li>
       </ul>
       <div className={styles.burgerMenu}>
