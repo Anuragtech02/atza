@@ -1,2 +1,0 @@
-(this.webpackJsonpatza=this.webpackJsonpatza||[]).push([[8],{94:function(t,n,o){"use strict";o.d(n,"a",(function(){return e}));var r=o(31);function e(t){return Object(r.a)({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"line",attr:{x1:"12",y1:"5",x2:"12",y2:"19"}},{tag:"polyline",attr:{points:"19 12 12 19 5 12"}}]})(t)}}}]);
-//# sourceMappingURL=8.26a7dd68.chunk.js.map
