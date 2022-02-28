@@ -9,6 +9,7 @@ import project2 from "../../assets/video-editing.jpg";
 import project3 from "../../assets/atza-events.jpg";
 import project4 from "../../assets/atza-ui.jpg";
 import { Carousel } from "../../components";
+import { useNavigate } from "react-router";
 
 import tataLogo from "../../assets/logos/tata-logo.png";
 import bigbasketLogo from "../../assets/logos/bigbasket-logo.png";
@@ -26,7 +27,7 @@ const Home = () => {
     },
     {
       title: "Content Writing & Management",
-      link: "/content",
+      link: "/content-writing",
       image: project2,
     },
     {
@@ -74,6 +75,8 @@ const Home = () => {
       message: "They're very responsive and go satisfaction",
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <MainLayout classes={[styles.container]}>
@@ -124,14 +127,18 @@ const Home = () => {
       <section className={styles.servicesContainer}>
         <h1>Here's how we add value to your Brand</h1>
         <h4>
-          We are offer a plethora of Services to help you crack the digital
+          We offer a plethora of Services to help you crack the digital
           Conundrum & make an impact on your potential customers
         </h4>
         <div className={styles.services}>
           <Grid container>
             {services.map((service, i) => (
               <Grid item key={service.title} md={3} sm={6} xs={12}>
-                <article key={i} className={styles.service}>
+                <article
+                  key={i}
+                  className={styles.service}
+                  onClick={() => navigate(`/services/${service.link}`)}
+                >
                   <img src={service.image} alt={service.title} />
                   <div>
                     <h3>{service.title}</h3>
