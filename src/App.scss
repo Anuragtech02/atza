@@ -9,6 +9,7 @@
 :root {
   --clr-text-dark: rgba(20, 20, 20, 0.9);
   --clr-primary: #2179ff;
+  --clr-primary-light: #7eb2ff;
   --fixed-width: 80%;
 }
 body {
@@ -29,6 +30,19 @@ body {
   span {
     color: rgba(0, 0, 0, 0.7);
   }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 600px) {

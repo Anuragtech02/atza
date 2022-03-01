@@ -13,7 +13,7 @@ const VideoStudio = lazy(() => import("./pages/VideoStudio/VideoStudio"));
 
 const App = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="loading">Loading...</div>}>
       <Router basename="/atza/">
         <Routes>
           <Route path="/" element={<Home />} />
