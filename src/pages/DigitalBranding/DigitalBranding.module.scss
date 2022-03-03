@@ -1,0 +1,78 @@
+@import "../../utils/commons.scss";
+
+.container {
+  .wrapper {
+    width: var(--fixed-width);
+    margin: 0 auto;
+  }
+
+  .stats {
+    @extend .flexRow;
+    width: var(--fixed-width);
+    margin: 0 auto;
+    .stat {
+      flex: 1;
+      padding: 4rem 0;
+      margin: 2rem 0;
+      background-size: cover;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        z-index: 0;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: var(--clr-primary);
+      }
+      h1,
+      p {
+        text-align: center;
+        z-index: 10;
+        opacity: 0.9;
+      }
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+
+  main {
+    background: var(--clr-primary-light);
+    padding: 2rem 0;
+    h2,
+    p {
+      text-align: center;
+      color: white;
+      span {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .portfolio {
+    margin-top: 2rem;
+    .project {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      span {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
