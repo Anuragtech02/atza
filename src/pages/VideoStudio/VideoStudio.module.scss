@@ -1,0 +1,76 @@
+@import "../../utils/commons.scss";
+
+.container {
+  .stats {
+    @extend .flexRow;
+    width: var(--fixed-width);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    .stat {
+      text-align: center;
+      background: var(--clr-primary);
+      border: 5px solid white;
+      padding: 3rem 1rem;
+      min-width: 280px;
+
+      &:nth-child(2) {
+        background: var(--clr-primary-light);
+      }
+      h1,
+      p {
+        color: white;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-weight: 600;
+      }
+      flex: 1;
+      h2 {
+        color: white;
+        text-align: center;
+      }
+      padding: 3rem 0;
+    }
+  }
+  main {
+    background: var(--clr-primary-light);
+    .wrapper {
+      width: var(--fixed-width);
+      margin: 0 auto;
+      padding: 3rem 0;
+
+      h2,
+      p {
+        text-align: center;
+        color: white;
+        span {
+          text-decoration: underline;
+          text-decoration-color: rgb(255, 86, 86);
+          color: white;
+        }
+      }
+
+      .projects {
+        margin-top: 2rem;
+        .project {
+          position: relative;
+          img {
+            width: 100%;
+          }
+          span {
+            position: absolute;
+            bottom: 1.2rem;
+            left: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: white;
+            padding: 0.2rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
