@@ -1,14 +1,14 @@
 import { Header } from "../../components";
 import MainLayout from "../../layouts/MainLayout";
-import styles from "./Events.module.scss";
+import styles from "./DigitalBranding.module.scss";
 
-const Events = () => {
+const DigitalBranding = () => {
   return (
     <MainLayout>
-      <Header title="Events" />
+      <Header title="DigitalBranding" />
       <div className={styles.container}></div>
     </MainLayout>
   );
 };
 
-export default Events;
+export default DigitalBranding;

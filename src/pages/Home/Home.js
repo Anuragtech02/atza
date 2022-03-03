@@ -36,8 +36,8 @@ const Home = () => {
       image: project3,
     },
     {
-      title: "Events",
-      link: "/events",
+      title: "Digital Branding",
+      link: "/digital-branding",
       image: project4,
     },
   ];

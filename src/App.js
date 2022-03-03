@@ -8,7 +8,9 @@ const ContentWriting = lazy(() =>
   import("./pages/ContentWriting/ContentWriting")
 );
 const Design = lazy(() => import("./pages/Design/Design"));
-const Events = lazy(() => import("./pages/Events/Events"));
+const DigitalBranding = lazy(() =>
+  import("./pages/DigitalBranding/DigitalBranding")
+);
 const VideoStudio = lazy(() => import("./pages/VideoStudio/VideoStudio"));
 
 const App = () => {
@@ -23,7 +25,10 @@ const App = () => {
             element={<ContentWriting />}
           />
           <Route path="/services/design" element={<Design />} />
-          <Route path="/services/events" element={<Events />} />
+          <Route
+            path="/services/digital-branding"
+            element={<DigitalBranding />}
+          />
           <Route path="/services/video-studio" element={<VideoStudio />} />
         </Routes>
       </Router>
