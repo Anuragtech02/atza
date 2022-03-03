@@ -4,6 +4,8 @@ import MainLayout from "../../layouts/MainLayout";
 import styles from "./Design.module.scss";
 import uibg from "../../assets/bg/uiux-bg.jpg";
 import { Grid } from "@mui/material";
+import Lightbox from "react-awesome-lightbox";
+import "react-awesome-lightbox/build/style.css";
 
 const raw = [
   {
@@ -19,6 +21,7 @@ const Design = () => {
   const [data, setData] = useState([]);
   const [projects, setProjects] = useState([]);
   const [projectsLoadedIndex, setProjectsLoadedIndex] = useState(5); // storing index so actual count is count + 1
+  const [startIndexModal, setStartIndexModal] = useState(null);
 
   useEffect(() => {
     let tempData = Array(20).fill(raw[0]);
@@ -82,7 +85,7 @@ const Design = () => {
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
                       <img src={project.image} alt={project.title} />
-                      <span>+</span>
+                      <span onClick={() => setStartIndexModal(i)}>+</span>
                     </div>
                   </Grid>
                 ))}
@@ -103,6 +106,15 @@ const Design = () => {
           </div>
         </main>
       </div>
+      {projects.length && startIndexModal !== null && (
+        <div className="image-modal">
+          <Lightbox
+            images={projects.map((img) => img.image)}
+            startIndex={startIndexModal}
+            onClose={() => setStartIndexModal(null)}
+          />
+        </div>
+      )}
     </MainLayout>
   );
 };
