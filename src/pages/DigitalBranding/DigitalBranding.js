@@ -50,7 +50,7 @@ const DigitalBranding = () => {
   return (
     <MainLayout>
       <Header
-        title="DigitalBranding"
+        title="Digital Branding"
         description="To reach out to the right set of audience, you need a gorgeous stragtegy. To create a good gorgeous strategy, you need a passionate team."
         bg={bg}
       />
@@ -78,7 +78,7 @@ const DigitalBranding = () => {
               for some of our prominent clients.
             </p>
             <h2>
-              Let's jump on to ur <span>Portfolio</span>
+              Let's jump on to our <span>Portfolio</span>
             </h2>
             <div className={styles.portfolio}>
               <Grid container spacing={1}>
