@@ -61,7 +61,7 @@ const DigitalBranding = () => {
             style={{ backgroundImage: `url(${stat1Img})` }}
           >
             <h1>5M+</h1>
-            <p>Impresions Delivered</p>
+            <p>Impressions Delivered</p>
           </div>
           <div
             className={styles.stat}

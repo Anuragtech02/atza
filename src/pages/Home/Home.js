@@ -85,24 +85,21 @@ const Home = () => {
           <span>LOGO</span>
           <h4>
             <strong>
-              A Part of the LIMEWIT Media group, we're a Media-as-a-Service
-              Organization
-            </strong>{" "}
-            with a team of passionate Mediapreneurs and a knack of improving the
-            Digital Content & Media Ecosystem
+              Reliable and Quality Content Production for your Brand
+            </strong>
           </h4>
-          <button>
+          {/* <button>
             <span>
               Learn More about us &nbsp; <BsArrowRight />
             </span>
-          </button>
+          </button> */}
         </div>
       </div>
       <div className={styles.stats}>
-        <div className={styles.heading}>
+        {/* <div className={styles.heading}>
           <h2>Our Superstats</h2>
           <span></span>
-        </div>
+        </div> */}
         <div className={styles.counters}>
           <div className={clsx(styles.clients, styles.counter)}>
             <span>

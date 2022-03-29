@@ -25,7 +25,8 @@
       position: relative;
       width: var(--fixed-width);
       margin: 0 auto;
-      padding: 4rem 0;
+      // padding: 10rem 0;
+      min-height: 50vh;
       span {
         font-size: 2rem;
         font-weight: 600;
@@ -180,6 +181,12 @@
           h3 {
             width: -moz-fit-content;
             width: fit-content;
+          }
+        }
+
+        &:hover {
+          &::before {
+            opacity: 0.3;
           }
         }
       }
