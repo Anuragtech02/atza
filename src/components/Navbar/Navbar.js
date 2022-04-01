@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className={styles.container}>
         <ul className={clsx(styles.navItems, styles.leftNav)}>
           <li className={styles.navItem}>
-            <Link to="/">Services</Link>
+            <Link to="/">Atza</Link>
           </li>
           {/* <li className={styles.navItem}>
           <Link to="/">Option2</Link>

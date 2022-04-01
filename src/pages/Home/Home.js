@@ -16,6 +16,20 @@ import bigbasketLogo from "../../assets/logos/bigbasket-logo.png";
 import nikeLogo from "../../assets/logos/nike-logo.png";
 import comLogo from "../../assets/logos/com-logo.png";
 
+import brand1 from "../../assets/logos/brand-1.png";
+import brand2 from "../../assets/logos/brand-2.png";
+import brand3 from "../../assets/logos/brand-3.png";
+import brand4 from "../../assets/logos/brand-4.png";
+import brand5 from "../../assets/logos/brand-5.png";
+import brand6 from "../../assets/logos/brand-6.png";
+import brand7 from "../../assets/logos/brand-7.png";
+import brand8 from "../../assets/logos/brand-8.png";
+import brand9 from "../../assets/logos/brand-9.png";
+import brand10 from "../../assets/logos/brand-10.png";
+import brand11 from "../../assets/logos/brand-11.png";
+import brand12 from "../../assets/logos/brand-12.png";
+import brand13 from "../../assets/logos/brand-13.png";
+
 import { BsArrowRight } from "react-icons/bs";
 
 const Home = () => {
@@ -43,10 +57,23 @@ const Home = () => {
   ];
 
   const clients = [
-    { logo: tataLogo, description: "" },
-    { logo: bigbasketLogo, description: "" },
-    { logo: nikeLogo, description: "" },
-    { logo: comLogo, description: "" },
+    // { logo: tataLogo, description: "" },
+    // { logo: bigbasketLogo, description: "" },
+    // { logo: nikeLogo, description: "" },
+    // { logo: comLogo, description: "" },
+    { logo: brand1, description: "" },
+    { logo: brand2, description: "" },
+    { logo: brand3, description: "" },
+    { logo: brand4, description: "" },
+    { logo: brand5, description: "" },
+    { logo: brand6, description: "" },
+    { logo: brand7, description: "" },
+    { logo: brand8, description: "" },
+    { logo: brand9, description: "" },
+    { logo: brand10, description: "" },
+    { logo: brand11, description: "" },
+    { logo: brand12, description: "" },
+    { logo: brand13, description: "" },
   ];
 
   const testimonials = [
@@ -160,7 +187,10 @@ const Clients = ({ clients = [] }) => {
     <section className={styles.clients}>
       <div className={styles.heading}>
         <h1>SuperClients</h1>
-        <p>The superbrands we've helped create an impact</p>
+        <p>
+          The superbrands we and our sister organizations have helped create an
+          impact
+        </p>
       </div>
       <div className={styles.clientsSlider}>
         <Carousel className={styles.slider}>
