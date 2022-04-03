@@ -1,7 +1,5 @@
 import styles from "./Home.module.scss";
 import MainLayout from "../../layouts/MainLayout";
-import servicesIcon from "../../assets/icons/services-icon.png";
-import usersIcon from "../../assets/icons/users-icon.png";
 import clsx from "clsx";
 import { Grid } from "@mui/material";
 import project1 from "../../assets/atza-graphic.jpg";
@@ -10,11 +8,9 @@ import project3 from "../../assets/atza-events.jpg";
 import project4 from "../../assets/atza-ui.jpg";
 import { Carousel } from "../../components";
 import { useNavigate } from "react-router";
+import { FaUserAlt } from "react-icons/fa";
 
-import tataLogo from "../../assets/logos/tata-logo.png";
-import bigbasketLogo from "../../assets/logos/bigbasket-logo.png";
 import nikeLogo from "../../assets/logos/nike-logo.png";
-import comLogo from "../../assets/logos/com-logo.png";
 
 import brand1 from "../../assets/logos/brand-1.png";
 import brand2 from "../../assets/logos/brand-2.png";
@@ -30,7 +26,11 @@ import brand11 from "../../assets/logos/brand-11.png";
 import brand12 from "../../assets/logos/brand-12.png";
 import brand13 from "../../assets/logos/brand-13.png";
 
+import logo from "../../assets/atza-dark-logo.png";
+
 import { BsArrowRight } from "react-icons/bs";
+import { FiSettings } from "react-icons/fi";
+import { CgArrowLongRight } from "react-icons/cg";
 
 const Home = () => {
   const services = [
@@ -109,7 +109,9 @@ const Home = () => {
     <MainLayout classes={[styles.container]}>
       <div className={styles.wrapper}>
         <div className={styles.hero}>
-          <span>LOGO</span>
+          <span>
+            <img src={logo} alt="logo" width={300} />
+          </span>
           <h4>
             <strong>
               Reliable and Quality Content Production for your Brand
@@ -130,7 +132,8 @@ const Home = () => {
         <div className={styles.counters}>
           <div className={clsx(styles.clients, styles.counter)}>
             <span>
-              <img src={usersIcon} alt="clients" />
+              {/* <img src={usersIcon} alt="clients" /> */}
+              <FaUserAlt fontSize={30} />
             </span>
             <div>
               <h1>50+</h1>
@@ -139,7 +142,9 @@ const Home = () => {
           </div>
           <div className={clsx(styles.services, styles.counter)}>
             <span>
-              <img src={servicesIcon} alt="services" />
+              {/* <img src={servicesIcon} alt="services" />
+               */}
+              <FiSettings fontSize={30} />
             </span>
             <div>
               <h1>5+</h1>
@@ -166,8 +171,9 @@ const Home = () => {
                   <img src={service.image} alt={service.title} />
                   <div>
                     <h3>{service.title}</h3>
-                    <BsArrowRight fontSize={20} />
+                    <CgArrowLongRight fontSize={20} />
                   </div>
+                  <div className={styles.underline}></div>
                 </article>
               </Grid>
             ))}

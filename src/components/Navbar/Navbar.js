@@ -2,6 +2,7 @@
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
+import logo from "../../assets/atza-dark-logo.png";
 
 const Navbar = () => {
   return (
@@ -9,7 +10,9 @@ const Navbar = () => {
       <nav className={styles.container}>
         <ul className={clsx(styles.navItems, styles.leftNav)}>
           <li className={styles.navItem}>
-            <Link to="/">Atza</Link>
+            <Link to="/">
+              <img src={logo} alt="logo" width={80} />
+            </Link>
           </li>
           {/* <li className={styles.navItem}>
           <Link to="/">Option2</Link>
