@@ -6,7 +6,7 @@ import { FiArrowDown } from "react-icons/fi";
 import working from "../../assets/bg-home.jpg";
 import changeByDesignImage from "../../assets/bg/branding-bg.jpg";
 import rhombushapedGird from "../../assets/bg/portfolio-pattern.png";
-import limewitLogo from "../../assets/icons/mail.png";
+import limewitLogo from "../../assets/logos/limewit-logo.png";
 import logo from "../../assets/icons/phone.png";
 
 const About = () => {
@@ -59,31 +59,44 @@ const About = () => {
               </p>
             </div>
           </div>
-          <img
-            className={styles.grid}
-            src={rhombushapedGird}
-            alt="Rhombus Shaped Grid"
-          />
-          <div className={styles.blackLine}></div>
+          <div className={styles.gridImgContainer}>
+            <img
+              className={styles.grid}
+              src={rhombushapedGird}
+              alt="Rhombus Shaped Grid"
+            />
+            <img
+              className={styles.grid}
+              src={rhombushapedGird}
+              alt="Rhombus Shaped Grid"
+            />
+          </div>
         </section>
+        <div className={styles.blackLine}></div>
+
         <section className={styles.sisterOrganizations}>
           <div className={styles.yellowBackground}>
             <h1>
-              Meet Our <span>Sister Organizations</span>{" "}
+              Meet Our <span>Sister Organizations</span>
             </h1>
             <div className={styles.logos}>
               <img src={limewitLogo} alt="Limewit" />
-              <img src={logo} alt="logo !" />
+              <img src={limewitLogo} alt="Limewit" />
             </div>
-            <img src={rhombushapedGird} alt="Rhombus Shaped Grid" />
-            <img src={rhombushapedGird} alt="Rhombus Shaped Grid" />
+            {/* <img src={rhombushapedGird} alt="Rhombus Shaped Grid" />
+            <img src={rhombushapedGird} alt="Rhombus Shaped Grid" /> */}
           </div>
         </section>
         <section className={styles.videoWrapper}>
           <div className={styles.video}>
             <iframe
-              src="https://www.youtube.com/watch?v=04v2ZMQxl-w"
-              title="Some Title"
+              width="1280"
+              height="720"
+              src="https://www.youtube.com/embed/o2gGD4ewTNA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
             ></iframe>
           </div>
         </section>
