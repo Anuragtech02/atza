@@ -34,10 +34,12 @@ const About = () => {
               <h1>Content & Media Production Excites Us.</h1>
               <div className={styles.redLine}></div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus ab aliquam accusamus repudiandae alias laudantium
-                dolor nihil corrupti qui esse quasi delectus ratione harum ex,
-                rerum maiores cupiditate. Inventore, unde.
+                We are a Team of Mediapreneurs with a knack for improving the
+                Digital Content and Media ecosystem with quick turnaround time
+                and quality content delivery. Content and Media play a vital
+                role in brand communications and it is our obsession with the
+                2Qs - Quick and Quality Content that we are proud to bring to
+                the table.
               </p>
             </div>
           </div>
@@ -81,13 +83,13 @@ const About = () => {
             </h1>
             <div className={styles.logos}>
               <img src={limewitLogo} alt="Limewit" />
-              <img src={limewitLogo} alt="Limewit" />
+              {/* <img src={limewitLogo} alt="Limewit" /> */}
             </div>
             {/* <img src={rhombushapedGird} alt="Rhombus Shaped Grid" />
             <img src={rhombushapedGird} alt="Rhombus Shaped Grid" /> */}
           </div>
         </section>
-        <section className={styles.videoWrapper}>
+        {/* <section className={styles.videoWrapper}>
           <div className={styles.video}>
             <iframe
               width="1280"
@@ -99,7 +101,7 @@ const About = () => {
               allowfullscreen
             ></iframe>
           </div>
-        </section>
+        </section> */}
       </main>
     </MainLayout>
   );
