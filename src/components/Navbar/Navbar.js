@@ -20,10 +20,10 @@ const Navbar = () => {
         </ul>
         <ul className={clsx(styles.navItems, styles.rightNav)}>
           <li className={styles.navItem}>
-            <Link to="/blog">Blog</Link>
+            <Link to="#">Blog</Link>
           </li>
           <li className={styles.navItem}>
-            <Link to="/contact">Contact Us</Link>
+            <Link to="#">Contact Us</Link>
           </li>
           <li className={styles.navItem}>
             <Link to="/about">About Us</Link>
