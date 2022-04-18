@@ -51,22 +51,27 @@ const VideoStudio = () => {
         title="Video Studio"
         description="To deliver an impressive story, you need an impacttful video. To creat an impactful video, you need a passionate team."
         bg={bg}
+        bottomComp={
+          <div className={styles.stats}>
+            <div className={styles.stat}>
+              <h1>500+</h1>
+              <p>Video Delivered</p>
+              <span></span>
+            </div>
+            <div className={styles.stat}>
+              <h1>30+</h1>
+              <p>Clients Served</p>
+              <span></span>
+            </div>
+            <div className={styles.stat}>
+              <h1>5</h1>
+              <p>Shortfilms Recognized across the globe</p>
+              <span></span>
+            </div>
+          </div>
+        }
       />
       <div className={styles.container}>
-        <div className={styles.stats}>
-          <div className={styles.stat}>
-            <h1>500+</h1>
-            <p>Video Delivered</p>
-          </div>
-          <div className={styles.stat}>
-            <h1>30+</h1>
-            <p>Clients Served</p>
-          </div>
-          <div className={styles.stat}>
-            <h1>5</h1>
-            <p>Shortfilms Recognized across the globe</p>
-          </div>
-        </div>
         <main>
           <div className={styles.wrapper}>
             <p>

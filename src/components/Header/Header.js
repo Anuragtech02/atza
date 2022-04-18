@@ -7,6 +7,7 @@ const Header = ({
   description,
   bg,
   classes = [],
+  bottomComp: BottomComp,
 }) => {
   return (
     Component || (
@@ -19,6 +20,7 @@ const Header = ({
           <span />
           <p>{description}</p>
         </div>
+        {BottomComp}
       </div>
     )
   );

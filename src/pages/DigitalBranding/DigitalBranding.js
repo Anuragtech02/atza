@@ -53,24 +53,30 @@ const DigitalBranding = () => {
         title="Digital Branding"
         description="To reach out to the right set of audience, you need a gorgeous stragtegy. To create a good gorgeous strategy, you need a passionate team."
         bg={bg}
+        bottomComp={
+          <div className={styles.stats}>
+            <div
+              className={styles.stat}
+              // style={{ backgroundImage: `url(${stat1Img})` }}
+            >
+              <h1>5M+</h1>
+              <p>
+                <span>Impressions</span> Delivered
+              </p>
+            </div>
+            <div
+              className={styles.stat}
+              // style={{ backgroundImage: `url(${stat2Img})` }}
+            >
+              <h1>15+</h1>
+              <p>
+                <span>Clients</span> Serviced
+              </p>
+            </div>
+          </div>
+        }
       />
       <div className={styles.container}>
-        <div className={styles.stats}>
-          <div
-            className={styles.stat}
-            style={{ backgroundImage: `url(${stat1Img})` }}
-          >
-            <h1>5M+</h1>
-            <p>Impressions Delivered</p>
-          </div>
-          <div
-            className={styles.stat}
-            style={{ backgroundImage: `url(${stat2Img})` }}
-          >
-            <h1>15+</h1>
-            <p>Clients Serviced</p>
-          </div>
-        </div>
         <main>
           <div className={styles.wrapper}>
             <p>
