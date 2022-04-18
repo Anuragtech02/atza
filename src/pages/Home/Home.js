@@ -36,22 +36,22 @@ const Home = () => {
   const services = [
     {
       title: "Video Studio",
-      link: "/video-studio",
+      link: "video-studio",
       image: project1,
     },
     {
       title: "Content Writing & Management",
-      link: "/content-writing",
+      link: "content-writing",
       image: project2,
     },
     {
       title: "Design & UI/UX",
-      link: "/design",
+      link: "design",
       image: project3,
     },
     {
       title: "Digital Branding",
-      link: "/digital-branding",
+      link: "digital-branding",
       image: project4,
     },
   ];

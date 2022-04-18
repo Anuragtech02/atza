@@ -17,22 +17,22 @@ const ContentWriting = () => {
       icon: ideaIcon,
     },
     {
+      title: "Research",
+      description:
+        "Consider this as the collection of all the required information to create content that your audience will cherish, we take our time to pick only the information that will stick with your audience for a long time.",
+      icon: glassIcon,
+    },
+    {
       title: "Development",
       description:
         "The amalgamation of the data and information with a seasoning of our signature style. We strive to create and develop content that will reflect your brand value and industry.",
       icon: coderIcon,
     },
     {
-      title: "Research",
-      description:
-        "Consider this as the collection of all the required information to create content that your audience will cherish, we take our time to pick only the information that will stick with your audience for a long time.",
-      icon: timeIcon,
-    },
-    {
       title: "Last stop",
       description:
         "Before presenting the final product, we taste the content to see if the data were added to match the accuracy and have reach the specific quality. Strategizing as per your audience - Planning according to theme and niche - Creating quality content - Curating the content that will reflect your brand. This is our recipe.",
-      icon: glassIcon,
+      icon: timeIcon,
     },
   ];
 
@@ -48,9 +48,9 @@ const ContentWriting = () => {
           <h3>Here's how we deliver your story.</h3>
           <div className={styles.hLine}></div>
           <div className={styles.content}>
-            <Grid container spacing={2}>
+            <Grid container>
               {data.map((item, i) => (
-                <Grid item xs={12} md={6} key={i}>
+                <Grid item xs={12} md={12} key={i}>
                   <ContentItem
                     icon={item.icon}
                     title={item.title}
