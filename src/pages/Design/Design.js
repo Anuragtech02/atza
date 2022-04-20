@@ -51,23 +51,36 @@ const Design = () => {
         title="Design & UI/UX"
         bg={uibg}
         description="Better Designs are the perfect recipe to your audience's attention. We've got the best recipe with the best designers in town."
+        bottomComp={
+          <div className={styles.heading}>
+            <span></span>
+            <h3>Our Design Offerings</h3>
+            <span></span>
+          </div>
+        }
       />
       <div className={styles.container}>
-        <div className={styles.heading}>
-          <h3>Our Design Offerings</h3>
-          <span></span>
-        </div>
         <div className={styles.services}>
           <div className={styles.service}>
-            <h2>UI/UX Designing</h2>
+            <span className={styles.vLine}></span>
+            <div>
+              <h2>UI/UX</h2>
+              <p>Designing</p>
+            </div>
           </div>
-          <span className={styles.vLine}></span>
           <div className={styles.service}>
-            <h2>Social Media Creatives</h2>
+            <span className={styles.vLine}></span>
+            <div>
+              <h2>Social Media</h2>
+              <p>Creatives</p>
+            </div>
           </div>
-          <span className={styles.vLine}></span>
           <div className={styles.service}>
-            <h2>Website Banner Designing</h2>
+            <span className={styles.vLine}></span>
+            <div>
+              <h2>Website Banner</h2>
+              <p>Designing</p>
+            </div>
           </div>
         </div>
         <main>
