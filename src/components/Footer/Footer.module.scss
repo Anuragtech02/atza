@@ -1,0 +1,61 @@
+@import "../../utils/commons.scss";
+
+.footerContainer {
+  background-color: var(--clr-secondary);
+  background-image: url(../../assets/bg/footer-pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    width: var(--fixed-width);
+    margin: 0 auto;
+    padding: 5rem 0;
+
+    h1,
+    h4 {
+      color: white;
+    }
+
+    h4 {
+      font-size: 1.8rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      margin-top: 1rem;
+      max-width: 600px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hline {
+      max-width: 300px;
+      height: 3px;
+      background: white;
+    }
+
+    .socialLinks {
+      margin-top: 1rem;
+
+      .socialIcon {
+        margin: 0 1rem !important;
+
+        &:nth-of-type(1) {
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .content {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

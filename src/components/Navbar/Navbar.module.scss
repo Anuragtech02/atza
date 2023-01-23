@@ -1,0 +1,77 @@
+@import "../../utils/commons.scss";
+
+.wrapper {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.container {
+  @extend .flexRow;
+  justify-content: space-between;
+  min-height: 100px;
+  width: var(--fixed-width);
+  margin: 0 auto;
+
+  .navItems {
+    @extend .flexRow;
+    justify-content: space-between;
+
+    list-style: none;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+      color: var(--clr-text-dark);
+      text-transform: uppercase;
+      font-weight: 600 !important;
+    }
+  }
+  .leftNav {
+    width: 12%;
+    // margin-left: calc((100% - var(--fixed-width)) / 2);
+  }
+  .rightNav {
+    width: 30%;
+    // margin-right: calc((100% - var(--fixed-width)) / 2);
+  }
+
+  .burgerMenu {
+    width: 1.6rem;
+    display: none;
+    .burger {
+      width: 100%;
+      height: 3px;
+      background: black;
+      margin: 4px 0;
+    }
+  }
+
+  @media screen and (max-width: $media-lg) {
+    .leftNav {
+      width: 15%;
+    }
+    .rightNav {
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width: $media-md) {
+    .leftNav {
+      width: 25%;
+    }
+    .rightNav {
+      width: 55%;
+    }
+  }
+
+  @media screen and (max-width: $media-sm) {
+    // .leftNav {
+    //   display: none;
+    // }
+    .rightNav {
+      display: none;
+    }
+    .burgerMenu {
+      display: block;
+    }
+  }
+}

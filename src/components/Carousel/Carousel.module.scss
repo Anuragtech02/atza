@@ -1,0 +1,36 @@
+@import "../../utils/commons.scss";
+
+.carousel {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  div {
+    height: 100% !important;
+  }
+}
+.sliderWrapper {
+  position: relative;
+  .nextBtn,
+  .prevBtn {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    svg {
+      fill: grey !important;
+      color: grey !important;
+    }
+  }
+  .nextBtn {
+    left: auto;
+    right: 10px;
+  }
+}

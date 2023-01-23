@@ -1,0 +1,114 @@
+@import "../../utils/commons.scss";
+
+.stats {
+  @extend .flexRow;
+  // width: var(--fixed-width);
+  // margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: -2rem;
+
+  .stat {
+    text-align: center;
+    // background: var(--clr-primary);
+    // border: 5px solid white;
+    padding: 3rem 1rem;
+    min-width: 280px;
+
+    span {
+      display: block;
+      height: 10px;
+      width: 50%;
+      margin: 0.5rem auto;
+    }
+
+    &:nth-child(1) {
+      // background: var(--clr-primary-light);
+      h1 {
+        color: var(--clr-secondary);
+      }
+      span {
+        background: var(--clr-secondary);
+      }
+    }
+    &:nth-child(2) {
+      // background: var(--clr-primary-light);
+      h1 {
+        color: green;
+      }
+      span {
+        background: green;
+      }
+    }
+    &:nth-child(3) {
+      // background: var(--clr-primary-light);
+      h1 {
+        color: var(--clr-primary);
+      }
+      span {
+        background: var(--clr-primary);
+      }
+    }
+    h1,
+    p {
+      font-family: "Oswald", sans-serif;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+    flex: 1;
+    h2 {
+      color: white;
+      text-align: center;
+    }
+    padding: 3rem 0;
+  }
+}
+
+.container {
+  main {
+    background: var(--clr-primary);
+    .wrapper {
+      width: var(--fixed-width);
+      margin: 0 auto;
+      padding: 3rem 0;
+
+      h2,
+      p {
+        text-align: center;
+        color: white;
+        span {
+          text-decoration: underline;
+          text-decoration-color: rgb(255, 86, 86);
+          color: white;
+        }
+      }
+
+      .projects {
+        margin-top: 2rem;
+        .project {
+          position: relative;
+          img {
+            width: 100%;
+          }
+          span {
+            position: absolute;
+            bottom: 1.2rem;
+            left: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: white;
+            padding: 0.2rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
