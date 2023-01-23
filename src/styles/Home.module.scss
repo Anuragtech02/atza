@@ -1,14 +1,14 @@
 @import "../utils/commons.scss";
 
-section {
-  h1 {
-    text-transform: uppercase;
-  }
-}
 .container {
+  section {
+    h1 {
+      text-transform: uppercase;
+    }
+  }
   overflow-x: hidden;
   .wrapper {
-    background-image: url(../../assets/bg-home.jpg);
+    background-image: url(../assets/bg-home.jpg);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -281,7 +281,7 @@ section {
   }
 
   .clients {
-    background-image: url(../../assets/bg/bg-pattern.png);
+    background-image: url(../assets/bg/bg-pattern.png);
     background-size: cover;
     padding-top: 2rem;
     // background-image: url(../../assets/bg/portfolio-pattern.png);
@@ -330,7 +330,7 @@ section {
 
   .testimonial {
     padding: 5rem 0;
-    background: url(../../assets/bg-testimonials.jpg);
+    background: url(../assets/bg-testimonials.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -353,7 +353,7 @@ section {
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url(../../assets/bg/footer-pattern.png);
+      background-image: url(../assets/bg/footer-pattern.png);
       background-repeat: no-repeat;
       background-size: cover;
       // z-index: 1;

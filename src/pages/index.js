@@ -1,32 +1,33 @@
 import styles from "../styles/Home.module.scss";
-import MainLayout from "../../layouts/MainLayout";
+import MainLayout from "@/layouts/MainLayout";
 import clsx from "clsx";
 import { Grid } from "@mui/material";
-import project1 from "../../assets/atza-graphic.jpg";
-import project2 from "../../assets/video-editing.jpg";
-import project3 from "../../assets/atza-events.jpg";
-import project4 from "../../assets/atza-ui.jpg";
-import { Carousel } from "../../components";
-import { useNavigate } from "react-router";
+import project1 from "@/assets/atza-graphic.jpg";
+import project2 from "@/assets/video-editing.jpg";
+import project3 from "@/assets/atza-events.jpg";
+import project4 from "@/assets/atza-ui.jpg";
+import Image from "next/image";
+import { Carousel } from "@/components";
+import { useRouter } from "next/router";
 import { FaUserAlt } from "react-icons/fa";
 
-import nikeLogo from "../../assets/logos/nike-logo.png";
+import nikeLogo from "@/assets/logos/nike-logo.png";
 
-import brand1 from "../../assets/logos/brand-1.png";
-import brand2 from "../../assets/logos/brand-2.png";
-import brand3 from "../../assets/logos/brand-3.png";
-import brand4 from "../../assets/logos/brand-4.png";
-import brand5 from "../../assets/logos/brand-5.png";
-import brand6 from "../../assets/logos/brand-6.png";
-import brand7 from "../../assets/logos/brand-7.png";
-import brand8 from "../../assets/logos/brand-8.png";
-import brand9 from "../../assets/logos/brand-9.png";
-import brand10 from "../../assets/logos/brand-10.png";
-import brand11 from "../../assets/logos/brand-11.png";
-import brand12 from "../../assets/logos/brand-12.png";
-import brand13 from "../../assets/logos/brand-13.png";
+import brand1 from "@/assets/logos/brand-1.png";
+import brand2 from "@/assets/logos/brand-2.png";
+import brand3 from "@/assets/logos/brand-3.png";
+import brand4 from "@/assets/logos/brand-4.png";
+import brand5 from "@/assets/logos/brand-5.png";
+import brand6 from "@/assets/logos/brand-6.png";
+import brand7 from "@/assets/logos/brand-7.png";
+import brand8 from "@/assets/logos/brand-8.png";
+import brand9 from "@/assets/logos/brand-9.png";
+import brand10 from "@/assets/logos/brand-10.png";
+import brand11 from "@/assets/logos/brand-11.png";
+import brand12 from "@/assets/logos/brand-12.png";
+import brand13 from "@/assets/logos/brand-13.png";
 
-import logo from "../../assets/atza-dark-logo.png";
+import logo from "@/assets/atza-dark-logo.png";
 
 import { BsArrowRight } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
@@ -103,14 +104,14 @@ const Home = () => {
     },
   ];
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <MainLayout classes={[styles.container]}>
       <div className={styles.wrapper}>
         <div className={styles.hero}>
           <span>
-            <img src={logo} alt="logo" width={300} />
+            <Image src={logo} alt="logo" width={300} />
           </span>
           <h4>
             <strong>
@@ -166,9 +167,9 @@ const Home = () => {
                 <article
                   key={i}
                   className={styles.service}
-                  onClick={() => navigate(`/services/${service.link}`)}
+                  onClick={() => router.push(`/services/${service.link}`)}
                 >
-                  <img src={service.image} alt={service.title} />
+                  <Image src={service.image} alt={service.title} />
                   <div>
                     <h3>{service.title}</h3>
                     <CgArrowLongRight fontSize={20} />
@@ -202,7 +203,7 @@ const Clients = ({ clients = [] }) => {
         <Carousel className={styles.slider}>
           {clients.map((client, i) => (
             <div key={i} className={styles.client}>
-              <img src={client.logo} alt={client.title} />
+              <Image src={client.logo} alt={client.title} />
               {/* <div className={styles.content}>
                 <h3>{client.title}</h3>
               </div> */}
@@ -227,7 +228,7 @@ const Testimonials = ({ testimonials = [] }) => {
           {testimonials.map((testimonial, i) => (
             <div key={i} className={styles.testimonialItem}>
               <div className={styles.testimonialContent}>
-                <img
+                <Image
                   src={testimonial.image}
                   className={styles.profile}
                   alt="profile"

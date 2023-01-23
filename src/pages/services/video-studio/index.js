@@ -1,10 +1,11 @@
-import { Header } from "../../components";
-import MainLayout from "../../layouts/MainLayout";
+import { Header } from "@/components";
+import MainLayout from "@/layouts/MainLayout";
 import styles from "./VideoStudio.module.scss";
-import bg from "../../assets/bg/video-studio-bg.jpg";
+import bg from "@/assets/bg/video-studio-bg.jpg";
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import ModalVideo from "react-modal-video";
+import Image from "next/image";
 
 const raw = [
   {
@@ -83,10 +84,10 @@ const VideoStudio = () => {
             </h2>
             <div className={styles.projects}>
               <Grid container spacing={1}>
-                {projects.map((project, i) => (
+                {[].map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <img src={project.image} alt={project.title} />
+                      <Image src={project.image} alt={project.title} fill />
                       <span
                         onClick={() => {
                           setCurrentVideo(videoIdFromUrl(project.url));

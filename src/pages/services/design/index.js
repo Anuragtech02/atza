@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Header } from "../../components";
-import MainLayout from "../../layouts/MainLayout";
+import { Header } from "@/components";
+import MainLayout from "@/layouts/MainLayout";
 import styles from "./Design.module.scss";
-import uibg from "../../assets/bg/uiux-bg.jpg";
+import uibg from "@/assets/bg/uiux-bg.jpg";
 import { Grid } from "@mui/material";
 import Lightbox from "react-awesome-lightbox";
 import "react-awesome-lightbox/build/style.css";
+import Image from "next/image";
 
 const raw = [
   {
@@ -97,7 +98,7 @@ const Design = () => {
                 {projects.map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <img src={project.image} alt={project.title} />
+                      <Image src={project.image} alt={project.title} />
                       <span onClick={() => setStartIndexModal(i)}>+</span>
                     </div>
                   </Grid>

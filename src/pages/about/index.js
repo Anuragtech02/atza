@@ -1,13 +1,13 @@
 import styles from "./About.module.scss";
-import { Navbar, Footer } from "../../components";
+import { Navbar, Footer } from "@/components";
 import { IconButton } from "@mui/material";
 import MainLayout from "../../layouts/MainLayout";
 import { FiArrowDown } from "react-icons/fi";
-import working from "../../assets/bg-home.jpg";
-import changeByDesignImage from "../../assets/bg/branding-bg.jpg";
-import rhombushapedGird from "../../assets/bg/portfolio-pattern.png";
-import limewitLogo from "../../assets/logos/limewit-logo.png";
-import logo from "../../assets/icons/phone.png";
+import working from "@/assets/bg-home.jpg";
+import changeByDesignImage from "@/assets/bg/branding-bg.jpg";
+import rhombushapedGird from "@/assets/bg/portfolio-pattern.png";
+import limewitLogo from "@/assets/logos/limewit-logo.png";
+import logo from "@/assets/icons/phone.png";
 
 const About = () => {
   const missionContent = [

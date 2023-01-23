@@ -1,12 +1,13 @@
 import styles from "./ContentWriting.module.scss";
-import { Header } from "../../components";
-import MainLayout from "../../layouts/MainLayout";
-import penBg from "../../assets/bg/pen-bg.jpg";
+import { Header } from "@/components";
+import MainLayout from "@/layouts/MainLayout";
+import penBg from "@/assets/bg/pen-bg.jpg";
 import { Grid } from "@mui/material";
-import ideaIcon from "../../assets/icons/idea.png";
-import coderIcon from "../../assets/icons/coder.png";
-import timeIcon from "../../assets/icons/time.png";
-import glassIcon from "../../assets/icons/glass.png";
+import ideaIcon from "@/assets/icons/idea.png";
+import coderIcon from "@/assets/icons/coder.png";
+import timeIcon from "@/assets/icons/time.png";
+import glassIcon from "@/assets/icons/glass.png";
+import Image from "next/image";
 
 const ContentWriting = () => {
   const data = [
@@ -72,7 +73,7 @@ const ContentItem = ({ icon, title, description }) => {
   return (
     <div className={styles.contentItem}>
       <div className={styles.image}>
-        <img src={icon} alt={title} />
+        <Image src={icon} alt={title} />
       </div>
       <div className={styles.text}>
         <h3>{title}</h3>

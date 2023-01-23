@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={styles.content}>
         <h4>shall we chat?</h4>
         <h1>
-          Let's talk about your
+          Let&apos;s talk about your
           <br /> business?
         </h1>
         <div className={styles.hline}></div>

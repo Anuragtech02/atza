@@ -1,13 +1,14 @@
-import { Header } from "../../components";
-import MainLayout from "../../layouts/MainLayout";
+import { Header } from "@/components";
+import MainLayout from "@/layouts/MainLayout";
 import styles from "./DigitalBranding.module.scss";
-import bg from "../../assets/bg/branding-bg.jpg";
+import bg from "@/assets/bg/branding-bg.jpg";
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import Lightbox from "react-awesome-lightbox";
 import "react-awesome-lightbox/build/style.css";
-import stat1Img from "../../assets/branding-stat-1.jpg";
-import stat2Img from "../../assets/branding-stat-2.jpg";
+import stat1Img from "@/assets/branding-stat-1.jpg";
+import stat2Img from "@/assets/branding-stat-2.jpg";
+import Image from "next/image";
 
 const raw = [
   {
@@ -91,7 +92,7 @@ const DigitalBranding = () => {
                 {projects.map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <img src={project.image} alt={project.title} />
+                      <Image src={project.image} alt={project.title} />
                       <span onClick={() => setStartIndexModal(i)}>+</span>
                     </div>
                   </Grid>
