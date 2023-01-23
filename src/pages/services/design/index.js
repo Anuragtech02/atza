@@ -4,8 +4,8 @@ import MainLayout from "@/layouts/MainLayout";
 import styles from "./Design.module.scss";
 import uibg from "@/assets/bg/uiux-bg.jpg";
 import { Grid } from "@mui/material";
-import Lightbox from "react-awesome-lightbox";
-import "react-awesome-lightbox/build/style.css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
 
 const raw = [
@@ -20,6 +20,7 @@ const raw = [
 
 const Design = () => {
   const [data, setData] = useState([]);
+  const [open, setOpen] = useState(true);
   const [projects, setProjects] = useState([]);
   const [projectsLoadedIndex, setProjectsLoadedIndex] = useState(5); // storing index so actual count is count + 1
   const [startIndexModal, setStartIndexModal] = useState(null);
@@ -98,7 +99,7 @@ const Design = () => {
                 {projects.map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <Image src={project.image} alt={project.title} />
+                      <img src={project.image} alt={project.title} />
                       <span onClick={() => setStartIndexModal(i)}>+</span>
                     </div>
                   </Grid>
@@ -122,10 +123,48 @@ const Design = () => {
       </div>
       {projects.length && startIndexModal !== null && (
         <div className="image-modal">
-          <Lightbox
+          {/* <Lightbox
+          
             images={projects.map((img) => img.image)}
             startIndex={startIndexModal}
             onClose={() => setStartIndexModal(null)}
+          /> */}
+          <Lightbox
+            open={open}
+            close={() => setOpen(false)}
+            slides={projects.map((img) => img.image)}
+            render={{
+              slide: (image, offset, rect) => {
+                const width = Math.round(
+                  Math.min(
+                    rect.width,
+                    (rect.height / image.height) * image.width
+                  )
+                );
+                const height = Math.round(
+                  Math.min(
+                    rect.height,
+                    (rect.width / image.width) * image.height
+                  )
+                );
+
+                return (
+                  <div style={{ position: "relative", width, height }}>
+                    <Image
+                      fill
+                      src={image}
+                      loading="eager"
+                      alt={"Hello"}
+                      sizes={
+                        typeof window !== "undefined"
+                          ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
+                          : `${width}px`
+                      }
+                    />
+                  </div>
+                );
+              },
+            }}
           />
         </div>
       )}

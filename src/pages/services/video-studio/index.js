@@ -87,7 +87,12 @@ const VideoStudio = () => {
                 {[].map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <Image src={project.image} alt={project.title} fill />
+                      <Image
+                        width={100}
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                      />
                       <span
                         onClick={() => {
                           setCurrentVideo(videoIdFromUrl(project.url));

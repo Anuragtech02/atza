@@ -4,8 +4,8 @@ import styles from "./DigitalBranding.module.scss";
 import bg from "@/assets/bg/branding-bg.jpg";
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
-import Lightbox from "react-awesome-lightbox";
-import "react-awesome-lightbox/build/style.css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import stat1Img from "@/assets/branding-stat-1.jpg";
 import stat2Img from "@/assets/branding-stat-2.jpg";
 import Image from "next/image";
@@ -92,7 +92,7 @@ const DigitalBranding = () => {
                 {projects.map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <Image src={project.image} alt={project.title} />
+                      <img src={project.image} alt={project.title} />
                       <span onClick={() => setStartIndexModal(i)}>+</span>
                     </div>
                   </Grid>
@@ -117,9 +117,43 @@ const DigitalBranding = () => {
       {projects.length && startIndexModal !== null && (
         <div className="image-modal">
           <Lightbox
-            images={projects.map((img) => img.image)}
-            startIndex={startIndexModal}
-            onClose={() => setStartIndexModal(null)}
+            open={open}
+            close={() => setOpen(false)}
+            slides={projects.map((img) => img.image)}
+            render={{
+              slide: (image, offset, rect) => {
+                const width = Math.round(
+                  Math.min(
+                    rect.width,
+                    (rect.height / image.height) * image.width
+                  )
+                );
+                const height = Math.round(
+                  Math.min(
+                    rect.height,
+                    (rect.width / image.width) * image.height
+                  )
+                );
+
+                return (
+                  <div style={{ position: "relative", width, height }}>
+                    <Image
+                      fill
+                      src={image}
+                      // width={100}<
+                      loading="eager"
+                      placeholder="blur"
+                      alt={"Hello"}
+                      sizes={
+                        typeof window !== "undefined"
+                          ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
+                          : `${width}px`
+                      }
+                    />
+                  </div>
+                );
+              },
+            }}
           />
         </div>
       )}
