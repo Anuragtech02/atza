@@ -32,6 +32,7 @@ import logo from "@/assets/atza-dark-logo.png";
 import { BsArrowRight } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
 import { CgArrowLongRight } from "react-icons/cg";
+import Head from "next/head";
 
 const Home = () => {
   const services = [
@@ -108,6 +109,9 @@ const Home = () => {
 
   return (
     <MainLayout classes={[styles.container]}>
+      <Head>
+        <title>Atza - A new age Media Agency</title>
+      </Head>
       <div className={styles.wrapper}>
         <div className={styles.hero}>
           <span>
