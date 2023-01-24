@@ -9,10 +9,11 @@ const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.content}>
-        <h4>shall we chat?</h4>
+        <h4>Convinced much?</h4>
         <h1>
-          Let&apos;s talk about your
-          <br /> business?
+          Let’s talk about your business!
+          <br />
+          Connect with us on
         </h1>
         <div className={styles.hline}></div>
         {/* <p>
