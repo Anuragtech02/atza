@@ -7,7 +7,7 @@ import project2 from "@/assets/video-editing.jpg";
 import project3 from "@/assets/atza-events.jpg";
 import project4 from "@/assets/atza-ui.jpg";
 import Image from "next/image";
-import { Carousel } from "@/components";
+import { Carousel, CustomImage } from "@/components";
 import { useRouter } from "next/router";
 import { FaUserAlt } from "react-icons/fa";
 
@@ -39,22 +39,22 @@ const Home = () => {
     {
       title: "Video Studio",
       link: "video-studio",
-      image: project1,
+      image: "/services/atza-graphic.jpg",
     },
     {
       title: "Content Writing & Management",
       link: "content-writing",
-      image: project2,
+      image: "/services/video-editing.jpg",
     },
     {
       title: "Design & UI/UX",
       link: "design",
-      image: project3,
+      image: "/services/atza-events.jpg",
     },
     {
       title: "Digital Branding",
       link: "digital-branding",
-      image: project4,
+      image: "/services/atza-ui.jpg",
     },
   ];
 
@@ -192,7 +192,7 @@ const Home = () => {
                   className={styles.service}
                   onClick={() => router.push(`/services/${service.link}`)}
                 >
-                  <Image src={service.image} alt={service.title} />
+                  <CustomImage src={service.image} alt={service.title} />
                   <div>
                     <h3>{service.title}</h3>
                     <CgArrowLongRight fontSize={20} />
