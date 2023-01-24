@@ -13,19 +13,19 @@ import { FaUserAlt } from "react-icons/fa";
 
 import nikeLogo from "@/assets/logos/nike-logo.png";
 
-import brand1 from "@/assets/logos/brand-1.png";
-import brand2 from "@/assets/logos/brand-2.png";
-import brand3 from "@/assets/logos/brand-3.png";
-import brand4 from "@/assets/logos/brand-4.png";
-import brand5 from "@/assets/logos/brand-5.png";
-import brand6 from "@/assets/logos/brand-6.png";
-import brand7 from "@/assets/logos/brand-7.png";
-import brand8 from "@/assets/logos/brand-8.png";
-import brand9 from "@/assets/logos/brand-9.png";
-import brand10 from "@/assets/logos/brand-10.png";
-import brand11 from "@/assets/logos/brand-11.png";
-import brand12 from "@/assets/logos/brand-12.png";
-import brand13 from "@/assets/logos/brand-13.png";
+const brand1 = "/logos/brand-1.png";
+const brand2 = "/logos/brand-2.png";
+const brand3 = "/logos/brand-3.png";
+const brand4 = "/logos/brand-4.png";
+const brand5 = "/logos/brand-5.png";
+const brand6 = "/logos/brand-6.png";
+const brand7 = "/logos/brand-7.png";
+const brand8 = "/logos/brand-8.png";
+const brand9 = "/logos/brand-9.png";
+const brand10 = "/logos/brand-10.png";
+const brand11 = "/logos/brand-11.png";
+const brand12 = "/logos/brand-12.png";
+const brand13 = "/logos/brand-13.png";
 
 import logo from "@/assets/atza-dark-logo.png";
 
@@ -226,7 +226,12 @@ const Clients = ({ clients = [] }) => {
         <Carousel className={styles.slider}>
           {clients.map((client, i) => (
             <div key={i} className={styles.client}>
-              <Image src={client.logo} alt={client.title} />
+              <CustomImage
+                src={client.logo}
+                alt={client.title}
+                width={200}
+                height={200}
+              />
               {/* <div className={styles.content}>
                 <h3>{client.title}</h3>
               </div> */}

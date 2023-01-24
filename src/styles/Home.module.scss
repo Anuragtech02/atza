@@ -91,16 +91,19 @@
     .counters {
       @extend .flexRow;
       justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
       .counter {
         @extend .flexRow;
         background: rgba(0, 0, 0, 0.06);
         flex: 1;
+        min-width: 250px;
         padding: 2rem 0;
 
         span {
           padding: 1rem;
-          width: 100px;
-          height: 100px;
+          width: 80px;
+          height: 80px;
           border-radius: 50%;
           position: relative;
 
@@ -138,7 +141,7 @@
         div {
           margin-left: 1rem;
           h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: #fbab2e;
             margin: 0;
             text-align: left;
@@ -147,13 +150,15 @@
             font-weight: 400;
           }
           p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 700;
             color: black;
             margin: 0;
             font-family: "Oswald", sans-serif;
             margin-top: -0.6rem;
             text-transform: capitalize;
+            max-width: 200px;
+            word-wrap: break-word;
           }
         }
 
