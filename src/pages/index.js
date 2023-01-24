@@ -39,12 +39,12 @@ const Home = () => {
     {
       title: "Video Production",
       link: "video-studio",
-      image: "/services/atza-graphic.jpg",
+      image: "/services/video-editing.jpg",
     },
     {
       title: "Content Writing",
       link: "content-writing",
-      image: "/services/video-editing.jpg",
+      image: "/services/content-writing.jpg",
     },
     // {
     //   title: "Design & UI/UX",
@@ -54,7 +54,7 @@ const Home = () => {
     {
       title: "Digital Brand Management",
       link: "digital-branding",
-      image: "/services/atza-ui.jpg",
+      image: "/services/branding-stat-2.jpg",
     },
   ];
 
