@@ -37,22 +37,22 @@ import Head from "next/head";
 const Home = () => {
   const services = [
     {
-      title: "Video Studio",
+      title: "Video Production",
       link: "video-studio",
       image: project1,
     },
     {
-      title: "Content Writing & Management",
+      title: "Content Writing",
       link: "content-writing",
       image: project2,
     },
+    // {
+    //   title: "Design & UI/UX",
+    //   link: "design",
+    //   image: project3,
+    // },
     {
-      title: "Design & UI/UX",
-      link: "design",
-      image: project3,
-    },
-    {
-      title: "Digital Branding",
+      title: "Digital Brand Management",
       link: "digital-branding",
       image: project4,
     },
@@ -80,28 +80,32 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Dan Brown",
+      name: "Aorin Shariyari",
       image: nikeLogo,
-      position: "Senior Marketing Manager at Mozilla",
-      message: "They're very responsive and go satisfaction",
+      position: "Marketing, Max Healthcare",
+      message:
+        "We at Max Healthcare have been working with Lakshay & his team for a long. They bring in innovative concepts of impact content, shoot and deliver high-quality videos, work on tighter deadlines without compromising on any aspect and are very professional in the services they deliver.",
     },
     {
-      name: "Dan Brown",
+      name: "Ankit Luthra",
       image: nikeLogo,
-      position: "Senior Marketing Manager at Mozilla",
-      message: "They're very responsive and go satisfaction",
+      position: "Founder, Ficus Plus",
+      message:
+        "They are real professionals, and I must say, handles pressure situation well. ATZA worked on two of my projects and delivered the content well on time.",
     },
     {
-      name: "Dan Brown",
+      name: "Aditya Bose",
       image: nikeLogo,
-      position: "Senior Marketing Manager at Mozilla",
-      message: "They're very responsive and go satisfaction",
+      position: "CEO, Probano",
+      message:
+        "I have had a wonderful experience working with Team ATZA. Their team is very professional, knows their job, and doesn't need many revisions to deliver the final product. Their rates are also affordable, and quality is of the highest order. I'd always recommend them for any content writing, video shooting, editing, and digital marketing work you have.",
     },
     {
-      name: "Dan Brown",
+      name: "Pavlin Daskalov",
       image: nikeLogo,
-      position: "Senior Marketing Manager at Mozilla",
-      message: "They're very responsive and go satisfaction",
+      position: "Marketing, OLX Europe",
+      message:
+        "Lakshay is a true professional and very easy to communicate with. He can take on any challenge and show amazing results. The quality of his work is impeccable.",
     },
   ];
 
@@ -178,15 +182,17 @@ const Home = () => {
         </div>
       </div>
       <section className={styles.servicesContainer}>
-        <h1>Here&apos;s how we add value to your Brand</h1>
+        <h1>
+          Welcome to the world of creative and integrated digital solutions!
+        </h1>
         <h4>
-          We offer a plethora of Services to help you crack the digital
-          Conundrum & make an impact on your potential customers
+          Our fusion of extravagant content and video production services will
+          help your business grow to greater heights.
         </h4>
         <div className={styles.services}>
           <Grid container>
             {services.map((service, i) => (
-              <Grid item key={service.title} md={3} sm={6} xs={12}>
+              <Grid item key={service.title} md={4} sm={6} xs={12}>
                 <article
                   key={i}
                   className={styles.service}
@@ -216,10 +222,10 @@ const Clients = ({ clients = [] }) => {
   return (
     <section className={styles.clients}>
       <div className={styles.heading}>
-        <h1>SuperClients</h1>
+        <h1>Life Before and Ahead With Our Clients</h1>
         <p>
-          The superbrands we and our sister organizations have helped create an
-          impact
+          We at ATZA, take pride in working with a network of clients across the
+          globe, impacting businesses for good.
         </p>
       </div>
       <div className={styles.clientsSlider}>

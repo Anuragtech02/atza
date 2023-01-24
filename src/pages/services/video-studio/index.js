@@ -13,7 +13,7 @@ const raw = [
     image: "https://source.unsplash.com/random/800x600",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    url: "https://youtu.be/_4kHxtiuML0",
+    url: "https://www.youtube.com/watch?v=ZJNMrM6cth4",
   },
 ];
 
@@ -49,24 +49,25 @@ const VideoStudio = () => {
   return (
     <MainLayout>
       <Header
-        title="Video Studio"
-        description="To deliver an impressive story, you need an impacttful video. To creat an impactful video, you need a passionate team."
+        title="High Quality Video Production Service"
+        description="Struggling to get your brand story out in a perfect way? You are at the most appropriate place.
+        We produce viral films and video content, uniquely delivering your message"
         bg={bg}
         bottomComp={
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <h1>500+</h1>
+              <h1>1000+</h1>
               <p>Video Delivered</p>
               <span></span>
             </div>
             <div className={styles.stat}>
               <h1>30+</h1>
-              <p>Clients Served</p>
+              <p>SuperClients served</p>
               <span></span>
             </div>
             <div className={styles.stat}>
-              <h1>5</h1>
-              <p>Shortfilms Recognized across the globe</p>
+              <h1>1000+</h1>
+              <p>Video Minutes delivered monthly</p>
               <span></span>
             </div>
           </div>
@@ -76,23 +77,18 @@ const VideoStudio = () => {
         <main>
           <div className={styles.wrapper}>
             <p>
-              We&apos;ve been delivereing High-Quality, Tailor-made vidoes for
-              our clients across multiple domains of industries.
+              We deliver High-Quality, Tailor-made Videos for our clients across
+              multiple domains.
             </p>
             <h2>
               Let&apos;s jump on to our <span>Portfolio</span>
             </h2>
             <div className={styles.projects}>
               <Grid container spacing={1}>
-                {[].map((project, i) => (
+                {projects.map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <Image
-                        width={100}
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                      />
+                      <img src={project.image} alt={project.title} />
                       <span
                         onClick={() => {
                           setCurrentVideo(videoIdFromUrl(project.url));

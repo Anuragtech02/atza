@@ -22,6 +22,7 @@ const raw = [
 
 const DigitalBranding = () => {
   const [data, setData] = useState([]);
+  const [open, setOpen] = useState(true);
   const [projects, setProjects] = useState([]);
   const [projectsLoadedIndex, setProjectsLoadedIndex] = useState(5); // storing index so actual count is count + 1
   const [startIndexModal, setStartIndexModal] = useState(null);
@@ -51,8 +52,8 @@ const DigitalBranding = () => {
   return (
     <MainLayout>
       <Header
-        title="Digital Branding"
-        description="To reach out to the right set of audience, you need a gorgeous stragtegy. To create a good gorgeous strategy, you need a passionate team."
+        title="Digital Brand Management"
+        description="Are you ready to make an impact online with your brand? Relax, while our mediapreneurs take care of your business."
         bg={bg}
         bottomComp={
           <div className={styles.stats}>
@@ -60,7 +61,7 @@ const DigitalBranding = () => {
               className={styles.stat}
               // style={{ backgroundImage: `url(${stat1Img})` }}
             >
-              <h1>5M+</h1>
+              <h1>10M+</h1>
               <p>
                 <span>Impressions</span> Delivered
               </p>
@@ -69,9 +70,9 @@ const DigitalBranding = () => {
               className={styles.stat}
               // style={{ backgroundImage: `url(${stat2Img})` }}
             >
-              <h1>15+</h1>
+              <h1>20+</h1>
               <p>
-                <span>Clients</span> Serviced
+                <span>Super Clients</span> Serviced
               </p>
             </div>
           </div>
@@ -93,7 +94,14 @@ const DigitalBranding = () => {
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
                       <img src={project.image} alt={project.title} />
-                      <span onClick={() => setStartIndexModal(i)}>+</span>
+                      <span
+                        onClick={() => {
+                          setStartIndexModal(i);
+                          setOpen(true);
+                        }}
+                      >
+                        +
+                      </span>
                     </div>
                   </Grid>
                 ))}
@@ -137,19 +145,7 @@ const DigitalBranding = () => {
 
                 return (
                   <div style={{ position: "relative", width, height }}>
-                    <Image
-                      fill
-                      src={image}
-                      // width={100}<
-                      loading="eager"
-                      placeholder="blur"
-                      alt={"Hello"}
-                      sizes={
-                        typeof window !== "undefined"
-                          ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
-                          : `${width}px`
-                      }
-                    />
+                    <img src={image} alt="hello" />
                   </div>
                 );
               },

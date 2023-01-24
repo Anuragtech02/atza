@@ -41,7 +41,7 @@ const ContentWriting = () => {
     <MainLayout>
       <Header
         title="Content Writing & Management"
-        description="To keep your audience engaged, you need to put a right story. To create the right story, you need a passionate team."
+        description="Eyeballs-friendly and crisp content that will enable your business to have a greater conversion."
         bg={penBg}
       />
       <section className={styles.wrapper}>
