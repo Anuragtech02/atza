@@ -308,7 +308,10 @@
       //   background: rgba(0, 0, 0, 0.07);
       padding: 1rem 0;
       margin-top: 1rem;
-
+      > div > div > div > div > div > div {
+        justify-content: center;
+        display: flex;
+      }
       .client {
         @extend .flexRow;
         display: flex !important;

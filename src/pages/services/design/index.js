@@ -100,7 +100,14 @@ const Design = () => {
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
                       <img src={project.image} alt={project.title} />
-                      <span onClick={() => setStartIndexModal(i)}>+</span>
+                      <span
+                        onClick={() => {
+                          setStartIndexModal(i);
+                          setOpen(true);
+                        }}
+                      >
+                        +
+                      </span>
                     </div>
                   </Grid>
                 ))}
@@ -121,6 +128,7 @@ const Design = () => {
           </div>
         </main>
       </div>
+
       {projects.length && startIndexModal !== null && (
         <div className="image-modal">
           {/* <Lightbox
@@ -150,7 +158,7 @@ const Design = () => {
 
                 return (
                   <div style={{ position: "relative", width, height }}>
-                    <Image
+                    {/* <Image
                       fill
                       src={image}
                       loading="eager"
@@ -160,7 +168,8 @@ const Design = () => {
                           ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
                           : `${width}px`
                       }
-                    />
+                    /> */}
+                    <img src={image} alt="hello" />
                   </div>
                 );
               },

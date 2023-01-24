@@ -8,6 +8,7 @@ import changeByDesignImage from "@/assets/bg/branding-bg.jpg";
 import rhombushapedGird from "@/assets/bg/portfolio-pattern.png";
 import limewitLogo from "@/assets/logos/limewit-logo.png";
 import logo from "@/assets/icons/phone.png";
+import Image from "next/image";
 
 const About = () => {
   const missionContent = [
@@ -43,12 +44,12 @@ const About = () => {
               </p>
             </div>
           </div>
-          <img className={styles.working} src={working} alt="Working" />
+          <Image className={styles.working} src={working} alt="Working" />
         </section>
         <section className={styles.limewit}>
           <div className={styles.contentWrapper}>
             <div className={styles.left}>
-              <img src={changeByDesignImage} alt="Change by design" />
+              <Image src={changeByDesignImage} alt="Change by design" />
             </div>
             <div className={styles.right}>
               <h1>
@@ -62,12 +63,12 @@ const About = () => {
             </div>
           </div>
           <div className={styles.gridImgContainer}>
-            <img
+            <Image
               className={styles.grid}
               src={rhombushapedGird}
               alt="Rhombus Shaped Grid"
             />
-            <img
+            <Image
               className={styles.grid}
               src={rhombushapedGird}
               alt="Rhombus Shaped Grid"
@@ -82,7 +83,7 @@ const About = () => {
               Meet Our <span>Sister Organizations</span>
             </h1>
             <div className={styles.logos}>
-              <img src={limewitLogo} alt="Limewit" />
+              <Image src={limewitLogo} alt="Limewit" />
               {/* <img src={limewitLogo} alt="Limewit" /> */}
             </div>
             {/* <img src={rhombushapedGird} alt="Rhombus Shaped Grid" />

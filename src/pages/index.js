@@ -118,9 +118,7 @@ const Home = () => {
             <Image src={logo} alt="logo" width={300} />
           </span>
           <h4>
-            <strong>
-              Reliable and Quality Content Production for your Brand
-            </strong>
+            <strong>Quick and Quality Content for your Brand</strong>
           </h4>
           {/* <button>
             <span>
@@ -154,6 +152,27 @@ const Home = () => {
             <div>
               <h1>5+</h1>
               <p>Services</p>
+            </div>
+          </div>
+          <div className={clsx(styles.clients, styles.counter)}>
+            <span>
+              {/* <img src={usersIcon} alt="clients" /> */}
+              <FaUserAlt fontSize={30} />
+            </span>
+            <div>
+              <h1>50+</h1>
+              <p>Super Brands Served</p>
+            </div>
+          </div>
+          <div className={clsx(styles.services, styles.counter)}>
+            <span>
+              {/* <img src={servicesIcon} alt="services" />
+               */}
+              <FiSettings fontSize={30} />
+            </span>
+            <div>
+              <h1>10M+</h1>
+              <p>Impressions on our Impact Content</p>
             </div>
           </div>
         </div>
