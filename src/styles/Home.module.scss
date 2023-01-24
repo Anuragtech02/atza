@@ -402,6 +402,8 @@
 
         .testimonialItem {
           $profileWidth: 10rem;
+          max-height: 495px;
+          overflow: hidden;
           .testimonialContent {
             position: relative;
             width: 90% !important;
@@ -409,7 +411,6 @@
             padding: 2rem;
             margin-top: calc($profileWidth/2);
             background: white;
-
             .profile {
               position: absolute;
               top: calc($profileWidth/2 * (-1));
@@ -424,6 +425,8 @@
 
             .testimonialDescription {
               margin-top: calc($profileWidth/2);
+              max-height: 400px;
+              overflow: auto;
 
               h3 {
                 font-weight: 600;
