@@ -9,11 +9,56 @@ import Image from "next/image";
 
 const raw = [
   {
-    title: "Project 1",
+    title: "Jaggery - Impact Trailer Video - ATZA",
     image: "https://source.unsplash.com/random/800x600",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    url: "https://www.youtube.com/watch?v=ZJNMrM6cth4",
+    url: "https://youtu.be/sXaug_ki3fc?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title: "Jaggery - Impact Trailer Video - ATZA",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/lF7Z5TRTY60",
+  },
+  {
+    title: "Jaggery - Impact Trailer Video - ATZA",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/wMJgvHbs1GU?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title: "Jaggery - Impact Trailer Video - ATZA",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/vxd1yejucbg?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title: "Jaggery - Impact Trailer Video - ATZA",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/JGjfBto5ggE?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title: "Radio Jockey as a Career - NTS | Commercial Project",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/C5s7wAQISmQ?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title: "Purplle Investment Raise - News PhotoStory - Portfolio Project",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/ccfl8JQ6KHs?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title:
+      "Fast-Paced Teaser Video - NirogStreet 2nd National Ayurvedic Olympiad",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/ejRKutAL0HM?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title: "Happy, Healthy and Safe New Year | Max Healthcare",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/UTCxEzOhIJI?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
+  },
+  {
+    title:
+      "Robotic Surgery for Gallbladder Stone│Patient Success Story│Max Hospital, Saket",
+    image: "https://source.unsplash.com/random/800x600",
+    url: "https://youtu.be/UUjjWHdXyzY?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
 ];
 
@@ -25,7 +70,7 @@ const VideoStudio = () => {
   const [currentVideo, setCurrentVideo] = useState("");
 
   useEffect(() => {
-    let tempData = Array(20).fill(raw[0]);
+    let tempData = raw;
     setData(tempData);
     setProjects(tempData.slice(0, 6));
   }, []);
@@ -88,7 +133,12 @@ const VideoStudio = () => {
                 {projects.map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
                     <div className={styles.project}>
-                      <img src={project.image} alt={project.title} />
+                      <img
+                        src={`https://img.youtube.com/vi/${videoIdFromUrl(
+                          project.url
+                        )}/hqdefault.jpg`}
+                        alt={project.title}
+                      />
                       <span
                         onClick={() => {
                           setCurrentVideo(videoIdFromUrl(project.url));
