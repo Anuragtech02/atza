@@ -7,14 +7,76 @@ import { Grid } from "@mui/material";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
+import Head from "next/head";
 
 const raw = [
   {
     title: "Project 1",
-    image: "https://source.unsplash.com/random/800x600",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    url: "https://www.google.com",
+    image: "https://ik.imagekit.io/atza/services/design/design-1.jpeg",
+  },
+  {
+    title: "Project 2",
+    image: "https://ik.imagekit.io/atza/services/design/design-2.jpg",
+  },
+  {
+    title: "Project 3",
+    image: "https://ik.imagekit.io/atza/services/design/design-3.png",
+  },
+  {
+    title: "Project 4",
+    image: "https://ik.imagekit.io/atza/services/design/design-4.jpeg",
+  },
+  {
+    title: "Project 5",
+    image: "https://ik.imagekit.io/atza/services/design/design-5.jpeg",
+  },
+  {
+    title: "Project 6",
+    image: "https://ik.imagekit.io/atza/services/design/design-6.jpg",
+  },
+  {
+    title: "Project 7",
+    image: "https://ik.imagekit.io/atza/services/design/design-7.jpg",
+  },
+  {
+    title: "Project 8",
+    image: "https://ik.imagekit.io/atza/services/design/design-8.jpg",
+  },
+  {
+    title: "Project 9",
+    image: "https://ik.imagekit.io/atza/services/design/design-9.jpg",
+  },
+  {
+    title: "Project 10",
+    image: "https://ik.imagekit.io/atza/services/design/design-10.jpeg",
+  },
+  {
+    title: "Project 11",
+    image: "https://ik.imagekit.io/atza/services/design/design-11.jpg",
+  },
+  {
+    title: "Project 12",
+    image: "https://ik.imagekit.io/atza/services/design/design-12.jpeg",
+  },
+  {
+    title: "Project 13",
+    image: "https://ik.imagekit.io/atza/services/design/design-13.jpeg",
+  },
+  {
+    title: "Project 14",
+    image: "https://ik.imagekit.io/atza/services/design/design-14.jpeg",
+  },
+  {
+    title: "Project 15",
+    image: "https://ik.imagekit.io/atza/services/design/design-15.jpeg",
+  },
+  {
+    title: "Project 16",
+    image: "https://ik.imagekit.io/atza/services/design/design-16.jpeg",
+  },
+  {
+    title: "Project 17",
+    image: "https://ik.imagekit.io/atza/services/design/design-17.jpeg",
   },
 ];
 
@@ -26,7 +88,7 @@ const Design = () => {
   const [startIndexModal, setStartIndexModal] = useState(null);
 
   useEffect(() => {
-    let tempData = Array(20).fill(raw[0]);
+    let tempData = raw;
     setData(tempData);
     setProjects(tempData.slice(0, 6));
   }, []);
@@ -41,7 +103,7 @@ const Design = () => {
     } else if (projectsLoadedIndex <= data.length) {
       setProjects([
         ...projects,
-        ...data.slice(projectsLoadedIndex, data.length - 1),
+        ...data.slice(projectsLoadedIndex + 1, data.length - 1),
       ]);
       setProjectsLoadedIndex(data.length - 1);
     }
@@ -49,6 +111,13 @@ const Design = () => {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Design & UI/UX | Atza</title>
+        <meta
+          name="description"
+          content="Better Designs are the perfect recipe to your audience's attention. We've got the best recipe with the best designers in town."
+        />
+      </Head>
       <Header
         title="Design & UI/UX"
         bg={uibg}
@@ -98,7 +167,13 @@ const Design = () => {
               <Grid container spacing={1}>
                 {projects.map((project, i) => (
                   <Grid item key={i} md={4} sm={6} xs={12}>
-                    <div className={styles.project}>
+                    <div
+                      className={styles.project}
+                      onClick={() => {
+                        setStartIndexModal(i);
+                        setOpen(true);
+                      }}
+                    >
                       <img src={project.image} alt={project.title} />
                       <span
                         onClick={() => {
@@ -169,7 +244,14 @@ const Design = () => {
                           : `${width}px`
                       }
                     /> */}
-                    <img src={image} alt="hello" />
+                    <img
+                      src={image}
+                      alt="hello"
+                      style={{
+                        maxWidth: "100%",
+                        maxHeight: "90vh",
+                      }}
+                    />
                   </div>
                 );
               },

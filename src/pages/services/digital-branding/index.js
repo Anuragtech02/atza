@@ -9,6 +9,7 @@ import "yet-another-react-lightbox/styles.css";
 import stat1Img from "@/assets/branding-stat-1.jpg";
 import stat2Img from "@/assets/branding-stat-2.jpg";
 import Image from "next/image";
+import Head from "next/head";
 
 const raw = [
   {
@@ -51,6 +52,13 @@ const DigitalBranding = () => {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Digital Brand Management | Atza</title>
+        <meta
+          name="description"
+          content="Are you ready to make an impact online with your brand? Relax, while our mediapreneurs take care of your business."
+        />
+      </Head>
       <Header
         title="Digital Brand Management"
         description="Are you ready to make an impact online with your brand? Relax, while our mediapreneurs take care of your business."

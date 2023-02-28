@@ -8,6 +8,7 @@ import coderIcon from "@/assets/icons/coder.png";
 import timeIcon from "@/assets/icons/time.png";
 import glassIcon from "@/assets/icons/glass.png";
 import Image from "next/image";
+import Head from "next/head";
 
 const ContentWriting = () => {
   const data = [
@@ -39,6 +40,13 @@ const ContentWriting = () => {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Content Writing & Management | Atza</title>
+        <meta
+          name="description"
+          content="Eyeballs-friendly and crisp content that will enable your business to have a greater conversion."
+        />
+      </Head>
       <Header
         title="Content Writing & Management"
         description="Eyeballs-friendly and crisp content that will enable your business to have a greater conversion."

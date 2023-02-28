@@ -47,9 +47,9 @@ const Home = () => {
       image: "/services/content-writing.jpg",
     },
     // {
-    //   title: "Design & UI/UX",
+    //   title: "Design",
     //   link: "design",
-    //   image: project3,
+    //   image: "/services/ui-ux.png",
     // },
     {
       title: "Digital Brand Management",

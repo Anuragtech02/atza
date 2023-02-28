@@ -6,6 +6,7 @@ import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import ModalVideo from "react-modal-video";
 import Image from "next/image";
+import Head from "next/head";
 
 const raw = [
   {
@@ -83,6 +84,13 @@ const VideoStudio = () => {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Video Studio | Atza</title>
+        <meta
+          name="description"
+          content="High Quality Video Production Service"
+        />
+      </Head>
       <Header
         title="High Quality Video Production Service"
         description="Struggling to get your brand story out in a perfect way? You are at the most appropriate place.
