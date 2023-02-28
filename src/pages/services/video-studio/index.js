@@ -10,54 +10,44 @@ import Image from "next/image";
 const raw = [
   {
     title: "Jaggery - Impact Trailer Video - ATZA",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/sXaug_ki3fc?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title: "Jaggery - Impact Trailer Video - ATZA",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/lF7Z5TRTY60",
   },
   {
     title: "Jaggery - Impact Trailer Video - ATZA",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/wMJgvHbs1GU?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title: "Jaggery - Impact Trailer Video - ATZA",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/vxd1yejucbg?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title: "Jaggery - Impact Trailer Video - ATZA",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/JGjfBto5ggE?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title: "Radio Jockey as a Career - NTS | Commercial Project",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/C5s7wAQISmQ?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title: "Purplle Investment Raise - News PhotoStory - Portfolio Project",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/ccfl8JQ6KHs?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title:
       "Fast-Paced Teaser Video - NirogStreet 2nd National Ayurvedic Olympiad",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/ejRKutAL0HM?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title: "Happy, Healthy and Safe New Year | Max Healthcare",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/UTCxEzOhIJI?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
   {
     title:
       "Robotic Surgery for Gallbladder Stone│Patient Success Story│Max Hospital, Saket",
-    image: "https://source.unsplash.com/random/800x600",
     url: "https://youtu.be/UUjjWHdXyzY?list=PLO6m8oWWg4WJrLlg7vTS83cOau7CRgPxq",
   },
 ];
@@ -85,7 +75,7 @@ const VideoStudio = () => {
     } else if (projectsLoadedIndex <= data.length) {
       setProjects([
         ...projects,
-        ...data.slice(projectsLoadedIndex, data.length - 1),
+        ...data.slice(projectsLoadedIndex + 1, data.length - 1),
       ]);
       setProjectsLoadedIndex(data.length - 1);
     }
